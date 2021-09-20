@@ -8,7 +8,14 @@
     <string name="my_heart">My heart</string>
     <string name="my_heart_monitoring">My heart monitoring</string>
     <string name="a_man">A man</string>
-    <string name="_1">1</string>
+    <string name="_1" translatable="false">1</string>
     <string name="i_am_question">I am:</string>
     <string name="a_woman">A woman</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="how_old_are_you">How old are you?</string>
+    <string name="previous">PREVIOUS</string>
+    <string name="next">NEXT</string>
+    <string name="less_than_40_years_old">Less than 40 years old</string>
+    <string name="between_40_and_60_years_old">Between 40 and 60 years old</string>
+    <string name="more_than_60_years_old">More than 60 years old</string>
 </resources>
