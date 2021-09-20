@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F6EDED"
     tools:context=".IAm">
 
     <LinearLayout
@@ -21,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="I am"
+            android:text="@string/i_am"
             android:textAlignment="center"
             android:textColor="#CA2626"
             android:textSize="16sp"
@@ -32,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="My heart"
+            android:text="@string/my_heart"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -42,9 +43,59 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="My heart monitoring"
+            android:text="@string/my_heart_monitoring"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewNumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/_1"
+        android:textColor="#C12222"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LayoutBarreHaut" />
+
+    <TextView
+        android:id="@+id/textViewQuestion1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="@string/i_am_question"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewNumber1"
+        app:layout_constraintStart_toEndOf="@+id/textViewNumber1" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroupQ1"
+        android:layout_width="137dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion1">
+
+        <RadioButton
+            android:id="@+id/radioButtonAMan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/a_man"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonAWoman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/a_woman"
+            android:textSize="16sp" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

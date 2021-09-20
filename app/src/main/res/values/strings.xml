@@ -4,4 +4,11 @@
     <string name="your_name">Your name</string>
     <string name="your_name_hint">Your name</string>
     <string name="logo">Logo</string>
+    <string name="i_am">I am</string>
+    <string name="my_heart">My heart</string>
+    <string name="my_heart_monitoring">My heart monitoring</string>
+    <string name="a_man">A man</string>
+    <string name="_1">1</string>
+    <string name="i_am_question">I am:</string>
+    <string name="a_woman">A woman</string>
 </resources>
