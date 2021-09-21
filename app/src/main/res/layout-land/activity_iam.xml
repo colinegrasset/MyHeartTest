@@ -8,7 +8,7 @@
     tools:context=".IAm">
 
     <TextView
-        android:id="@+id/textViewNumber2"
+        android:id="@+id/MHMtextViewNumber2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="250dp"
@@ -17,11 +17,11 @@
         android:textColor="#C12222"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textViewNumber1"
-        app:layout_constraintTop_toBottomOf="@+id/LayoutBarreHaut" />
+        app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber1"
+        app:layout_constraintTop_toBottomOf="@+id/MHMLayoutBarreHaut" />
 
     <LinearLayout
-        android:id="@+id/LayoutBarreHaut"
+        android:id="@+id/MHMLayoutBarreHaut"
         android:layout_width="356dp"
         android:layout_height="20dp"
         android:layout_marginTop="20dp"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textViewBarreHautIam"
+            android:id="@+id/MHMtextViewBarreHautIam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -42,7 +42,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewBarreHautMyHeart"
+            android:id="@+id/MHMtextViewBarreHautMyHeart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -52,7 +52,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewBarreHautMyHeartMonito"
+            android:id="@+id/MHMtextViewBarreHautMyHeartMonito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -63,7 +63,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textViewNumber1"
+        android:id="@+id/MHMtextViewNumber1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -73,10 +73,10 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LayoutBarreHaut" />
+        app:layout_constraintTop_toBottomOf="@+id/MHMLayoutBarreHaut" />
 
     <TextView
-        android:id="@+id/textViewQuestion1"
+        android:id="@+id/MHMtextViewQuestion1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -84,11 +84,11 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewNumber1"
-        app:layout_constraintStart_toEndOf="@+id/textViewNumber1" />
+        app:layout_constraintBottom_toBottomOf="@+id/MHMtextViewNumber1"
+        app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber1" />
 
     <TextView
-        android:id="@+id/textViewQuestion2"
+        android:id="@+id/MHMtextViewQuestion2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -96,27 +96,27 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewNumber2"
-        app:layout_constraintStart_toEndOf="@+id/textViewNumber2" />
+        app:layout_constraintBottom_toBottomOf="@+id/MHMtextViewNumber2"
+        app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber2" />
 
     <RadioGroup
-        android:id="@+id/RadioGroupQ1"
+        android:id="@+id/MHMRadioGroupQ1"
         android:layout_width="137dp"
         android:layout_height="106dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textViewNumber1"
-        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion1">
+        app:layout_constraintStart_toStartOf="@+id/MHMtextViewNumber1"
+        app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion1">
 
         <RadioButton
-            android:id="@+id/radioButtonAMan"
+            android:id="@+id/MHMradioButtonQ1Yes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/a_man"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/radioButtonAWoman"
+            android:id="@+id/MHMradioButtonQ1No"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
@@ -125,23 +125,23 @@
     </RadioGroup>
 
     <RadioGroup
-        android:id="@+id/RagioGroupQ2"
+        android:id="@+id/MHMRadioGroupQ2"
         android:layout_width="263dp"
         android:layout_height="148dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textViewNumber2"
-        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion2">
+        app:layout_constraintStart_toStartOf="@+id/MHMtextViewNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion2">
 
         <RadioButton
-            android:id="@+id/radioButtonLess40"
+            android:id="@+id/MHMradioButtonQ2Yes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/less_than_40_years_old"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/radioButton4060"
+            android:id="@+id/MHMradioButtonQ2No"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/between_40_and_60_years_old"
@@ -156,7 +156,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/buttonPrevious"
+        android:id="@+id/MHMbuttonPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -166,7 +166,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/buttonNext"
+        android:id="@+id/MHMbuttonNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
