@@ -1,20 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">MyHeartTest</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="start_test">COMMENCER LE TEST</string>
     <string name="your_name">Votre prénom</string>
     <string name="your_name_hint">Votre prénom</string>
     <string name="logo">Logo</string>
-    <string name="i_am">Je suis</string>
+    <!--<string name="i_am" tools:ignore="DuplicateDefinition">Je suis</string>
     <string name="my_heart">Mon coeur</string>
     <string name="my_heart_monitoring">Mon suivi cardiaque</string>
     <string name="a_man">Un homme</string>
     <string name="i_am_question">Je suis :</string>
-    <string name="a_woman">Une femme</string>
+    <string name="a_woman">Une femme</string>-->
     <string name="how_old_are_you">Quel âge avez-vous?</string>
     <string name="previous">PRÉCÉDENT</string>
     <string name="next">SUIVANT</string>
     <string name="less_than_40_years_old">Moins de 40 ans</string>
     <string name="between_40_and_60_years_old">Entre 40 et 60 ans</string>
     <string name="more_than_60_years_old">Plus de 60 ans</string>
+    <string name="i_am">je suis</string>
+    <string name="my_heart">Mon coeur</string>
+    <string name="my_heart_monitoring">Mon suivi Cardiaque</string>
+    <string name="a_man">Un Homme</string>
+    <string name="i_am_question">Je suis:</string>
+    <string name="a_woman">Une femme</string>
+    <string name="do_you_have_a_heart_problem">Avez-vous des problèmes de coeur?</string>
+    <string name="no">Non</string>
+    <string name="yes">Oui</string>
+    <string name="do_you_have_a_cholesterol_problem">Avez-vous des problèmes de cholestérol?</string>
+    <string name="are_you_diabetic">Êtes-vous diabétique?</string>
+    <string name="do_you_have_high_blood_pressure">Faites-vous de l\'hypertension?</string>
 </resources>

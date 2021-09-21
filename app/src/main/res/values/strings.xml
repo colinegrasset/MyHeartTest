@@ -11,11 +11,20 @@
     <string name="_1" translatable="false">1</string>
     <string name="i_am_question">I am:</string>
     <string name="a_woman">A woman</string>
+    <string name="do_you_have_a_heart_problem">Do you have a heart problem?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
     <string name="_2" translatable="false">2</string>
+    <string name="do_you_have_a_cholesterol_problem">Do you have a cholesterol problem?</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="are_you_diabetic">Are you diabetic?</string>
+    <!--<string name="_2" translatable="false">2</string>-->
     <string name="how_old_are_you">How old are you?</string>
     <string name="previous">PREVIOUS</string>
     <string name="next">NEXT</string>
     <string name="less_than_40_years_old">Less than 40 years old</string>
     <string name="between_40_and_60_years_old">Between 40 and 60 years old</string>
     <string name="more_than_60_years_old">More than 60 years old</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="do_you_have_high_blood_pressure">Do you have high blood pressure?</string>
 </resources>
