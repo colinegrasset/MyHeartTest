@@ -16,7 +16,7 @@
     <string name="less_than_40_years_old">Moins de 40 ans</string>
     <string name="between_40_and_60_years_old">Entre 40 et 60 ans</string>
     <string name="more_than_60_years_old">Plus de 60 ans</string>
-    <string name="i_am">je suis</string>
+    <string name="i_am">Je suis</string>
     <string name="my_heart">Mon coeur</string>
     <string name="my_heart_monitoring">Mon suivi Cardiaque</string>
     <string name="a_man">Un Homme</string>
@@ -28,4 +28,7 @@
     <string name="do_you_have_a_cholesterol_problem">Avez-vous des problèmes de cholestérol?</string>
     <string name="are_you_diabetic">Êtes-vous diabétique?</string>
     <string name="do_you_have_high_blood_pressure">Faites-vous de l\'hypertension?</string>
+    <string name="have_you_already_reviewed_your_cardiovascular_risk_with_your_doctor">Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ?</string>
+    <string name="have_you_ever_had_a_heart_checkup">Avez-vous déjà effectué un bilan cardiaque ?</string>
+    <string name="have_you_ever_seen_a_cardiologist">"Avez-vous déjà consulté un cardiologue ?  "</string>
 </resources>

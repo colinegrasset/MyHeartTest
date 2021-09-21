@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:id="@+id/LayoutBarreHaut"
+        android:id="@+id/MHMLayoutBarreHaut"
         android:layout_width="356dp"
         android:layout_height="20dp"
         android:layout_marginTop="20dp"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textViewBarreHautIam"
+            android:id="@+id/MHMtextViewBarreHautIam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -49,7 +49,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewBarreHautMyHeart"
+            android:id="@+id/MHMtextViewBarreHautMyHeart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -60,7 +60,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewBarreHautMyHeartMonito"
+            android:id="@+id/MHMtextViewBarreHautMyHeartMonito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -81,7 +81,7 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LayoutBarreHaut" />
+        app:layout_constraintTop_toBottomOf="@+id/MHMLayoutBarreHaut" />
 
     <TextView
         android:id="@+id/mhtextViewNumberQ2"
@@ -161,7 +161,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/mhRadioGroupQ1"
         app:layout_constraintStart_toEndOf="@+id/mhtextViewNumber1"
-        app:layout_constraintTop_toBottomOf="@+id/LayoutBarreHaut"
+        app:layout_constraintTop_toBottomOf="@+id/MHMLayoutBarreHaut"
         app:layout_constraintVertical_bias="0.528" />
 
     <TextView

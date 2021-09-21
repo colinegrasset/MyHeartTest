@@ -5,10 +5,11 @@
       <map>
         <entry key="app/src/main/res/layout-land/activity_iam.xml" value="0.1984126984126984" />
         <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.1828125" />
+        <entry key="app/src/main/res/layout-land/activity_myheartmonito.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_iam.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_myheart.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_myheartmonito.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_myheartmonito.xml" value="0.22" />
       </map>
     </option>
   </component>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6EDED"
+    tools:context=".IAm">
+
+    <LinearLayout
+        android:id="@+id/MHMLayoutBarreHaut"
+        android:layout_width="356dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/MHMtextViewBarreHautIam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/i_am"
+            android:textAlignment="center"
+            android:textColor="#716D6D"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/MHMtextViewBarreHautMyHeart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/my_heart"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/MHMtextViewBarreHautMyHeartMonito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/my_heart_monitoring"
+            android:textAlignment="center"
+            android:textColor="#C52920"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="442dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MHMLayoutBarreHaut">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="491dp">
+
+                <Button
+                    android:id="@+id/MHMbuttonNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="@string/next"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <Button
+                    android:id="@+id/MHMbuttonPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="@string/previous"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <RadioGroup
+                    android:id="@+id/MHMRadioGroupQ3"
+                    android:layout_width="177dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@+id/MHMtextViewNumber3"
+                    app:layout_constraintTop_toBottomOf="@+id/MHMtextViewNumber3">
+
+                    <RadioButton
+                        android:id="@+id/MHMradioButtonQ3Yes"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:textColor="#616161"
+                        tools:ignore="TextContrastCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+                    <RadioButton
+                        android:id="@+id/MHMradioButtonQ3No"
+                        android:layout_width="155dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:textColor="#616161"
+                        tools:ignore="TextContrastCheck,TextContrastCheck" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/MHMtextViewQuestion3"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/have_you_ever_seen_a_cardiologist"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/MHMtextViewNumber3"
+                    app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber3" />
+
+                <RadioGroup
+                    android:id="@+id/MHMRadioGroupQ1"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@+id/MHMtextViewNumber1"
+                    app:layout_constraintTop_toBottomOf="@+id/MHMtextViewNumber1">
+
+                    <RadioButton
+                        android:id="@+id/MHMradioButtonQ1Yes"
+                        android:layout_width="156dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:textColor="#616161"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+                    <RadioButton
+                        android:id="@+id/MHMradioButtonQ1No"
+                        android:layout_width="154dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:text="@string/no"
+                        android:textColor="#616161"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/MHMtextViewNumber3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/_3"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MHMRadioGroupQ1" />
+
+                <TextView
+                    android:id="@+id/MHMtextViewQuestion2"
+                    android:layout_width="245dp"
+                    android:layout_height="51dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/have_you_ever_had_a_heart_checkup"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/MHMtextViewNumber2"
+                    app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber2" />
+
+                <RadioGroup
+                    android:id="@+id/MHMRadioGroupQ2"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="@+id/MHMtextViewNumber2"
+                    app:layout_constraintTop_toBottomOf="@+id/MHMtextViewNumber2">
+
+                    <RadioButton
+                        android:id="@+id/MHMradioButtonQ2Yes"
+                        android:layout_width="161dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:textColor="#616161"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck" />
+
+                    <RadioButton
+                        android:id="@+id/MHMradioButtonQ2No"
+                        android:layout_width="147dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:textColor="#616161"
+                        android:textSize="16sp"
+                        tools:ignore="TextContrastCheck" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/MHMtextViewNumber2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="350dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/_2"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/MHMtextViewNumber1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/_1"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/MHMtextViewQuestion1"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/have_you_already_reviewed_your_cardiovascular_risk_with_your_doctor"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/MHMtextViewNumber1"
+                    app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
