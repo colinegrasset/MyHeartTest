@@ -65,7 +65,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="491dp">
+                android:layout_height="571dp">
 
                 <Button
                     android:id="@+id/MHMbuttonNext"
