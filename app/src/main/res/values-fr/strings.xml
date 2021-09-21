@@ -28,4 +28,6 @@
     <string name="do_you_have_a_cholesterol_problem">Avez-vous des problèmes de cholestérol?</string>
     <string name="are_you_diabetic">Êtes-vous diabétique?</string>
     <string name="do_you_have_high_blood_pressure">Faites-vous de l\'hypertension?</string>
+    <string name="do_you_have_a_first_degree_relative_father_mother_brother_or_sister_who_had_heart_problems_heart_attack_stroke_sudden_death_before_age_55_for_a_man_or_before_age_65_for_a_woman">Avez-vous un parent du premier degré (père, mère, frère ou sœur) qui a eu des problèmes cardiaques (infarctus, AVC, mort subite) avant 55 ans pour un homme ou avant 65 ans chez une femme ?</string>
+    <string name="do_you_know_your_body_mass_index_bmi">Connaissez-vous votre indice de masse corporelle (IMC) ?</string>
 </resources>
