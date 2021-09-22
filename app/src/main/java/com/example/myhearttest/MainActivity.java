@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,15 +22,15 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivityOnCreate", "Test1");
     }
 
-    protected void startTest(android.view.View v){
-        Log.d("MainActivityStartTest", "Test2");
-        //f ((userName.getText().toString() == "Your name") | (userName.getText().toString() == "")){
+    public void startTest(View view) {
+        Log.d("MainActivityStartTest", userName.getText().toString());
+        if (userName.getText().toString().equals("")){
+            Toast.makeText(this,R.string.error_enter_name, Toast.LENGTH_LONG).show();
+        }else{
             Intent intent;
             intent = new Intent(this, IAm.class);
             intent.putExtra("inputusername", userName.getText().toString());
             startActivity(intent);
-        //}else{
-        //    Toast.makeText(this,R.string.error_enter_name, Toast.LENGTH_LONG).show();
-        //}
+        }
     }
 }
