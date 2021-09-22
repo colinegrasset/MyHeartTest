@@ -8,28 +8,8 @@
     android:orientation="horizontal"
     tools:context=".IAm">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="28dp"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="28dp"
-        android:text="@string/previous"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <LinearLayout
-        android:id="@+id/MHMLayoutBarreHaut"
+        android:id="@+id/LayoutBarreHaut"
         android:layout_width="356dp"
         android:layout_height="20dp"
         android:layout_marginTop="20dp"
@@ -39,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/MHMtextViewBarreHautIam"
+            android:id="@+id/textViewBarreHautIam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -49,7 +29,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/MHMtextViewBarreHautMyHeart"
+            android:id="@+id/textViewBarreHautMyHeart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -60,7 +40,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/MHMtextViewBarreHautMyHeartMonito"
+            android:id="@+id/textViewBarreHautMyHeartMonito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -70,223 +50,392 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/mhtextViewNumber1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:text="@string/_1"
-        android:textColor="#C12222"
-        android:textSize="34sp"
-        android:textStyle="bold"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="416dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MHMLayoutBarreHaut" />
+        app:layout_constraintTop_toBottomOf="@+id/guideline2">
 
-    <TextView
-        android:id="@+id/mhtextViewNumberQ2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="100dp"
-        android:text="@string/_2"
-        android:textColor="#C12222"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mhtextViewNumber1" />
-
-    <TextView
-        android:id="@+id/mhtextViewNumberQ3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="80dp"
-        android:text="@string/_3"
-        android:textColor="#C12222"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mhtextViewNumberQ2" />
-
-    <TextView
-        android:id="@+id/mhtextViewNumberQ4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="108dp"
-        android:text="@string/_4"
-        android:textColor="#C12222"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mhtextViewNumberQ3" />
-
-    <RadioGroup
-        android:id="@+id/mhRadioGroupQ1"
-        android:layout_width="322dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="21dp"
-        android:orientation="horizontal"
-        android:verticalScrollbarPosition="defaultPosition"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mhtextViewNumber1">
-
-        <RadioButton
-            android:id="@+id/mhYradioButtonQ1"
-            android:layout_width="145dp"
-            android:layout_height="wrap_content"
-            android:text="@string/yes"
-            android:textColor="#040000"
-            tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
-
-        <RadioButton
-            android:id="@+id/mhNradioButtonQ1"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/no"
-            android:textColor="#090000"
-            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
-    </RadioGroup>
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/mhQuestion1"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="1185dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/mhtextViewNumber1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/_1"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/mhtextViewNumberQ3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/_3"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhradioGroupQ2" />
+
+                <TextView
+                    android:id="@+id/mhQuestion1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/do_you_have_a_heart_problem"
+                    android:textColor="#040000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/mhtextViewNumber1"
+                    app:layout_constraintStart_toEndOf="@+id/mhtextViewNumber1" />
+
+                <RadioGroup
+                    android:id="@+id/mhradioGroupQ3"
+                    android:layout_width="331dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion3">
+
+                    <RadioButton
+                        android:id="@+id/mhyradioButtonQ3"
+                        android:layout_width="158dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:textColor="#070000"
+                        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+                    <RadioButton
+                        android:id="@+id/mhnradioButtonQ3"
+                        android:layout_width="169dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:textColor="#0B0000"
+                        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/mhtextViewNumberQ2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/_2"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhRadioGroupQ1" />
+
+                <TextView
+                    android:id="@+id/mhQuestion3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/are_you_diabetic"
+                    android:textColor="#040000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/mhtextViewNumberQ3"
+                    app:layout_constraintStart_toEndOf="@+id/mhtextViewNumberQ3" />
+
+                <TextView
+                    android:id="@+id/mhQuestion2"
+                    android:layout_width="341dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/do_you_have_a_cholesterol_problem"
+                    android:textColor="#040000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/mhtextViewNumberQ2"
+                    app:layout_constraintStart_toEndOf="@+id/mhtextViewNumberQ2" />
+
+                <TextView
+                    android:id="@+id/mhQuestion4"
+                    android:layout_width="325dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/do_you_have_high_blood_pressure"
+                    android:textColor="#040000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/mhtextViewNumberQ4"
+                    app:layout_constraintStart_toEndOf="@+id/mhtextViewNumberQ4" />
+
+                <TextView
+                    android:id="@+id/mhQuestion"
+                    android:layout_width="356dp"
+                    android:layout_height="155dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/do_you_have_a_first_degree_relative_father_mother_brother_or_sister_who_had_heart_problems_heart_attack_stroke_sudden_death_before_age_55_for_a_man_or_before_age_65_for_a_woman"
+                    android:textColor="#040000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/mhtextViewNumberQ5"
+                    app:layout_constraintStart_toEndOf="@+id/mhtextViewNumberQ5" />
+
+                <TextView
+                    android:id="@+id/mhQuestion5"
+                    android:layout_width="351dp"
+                    android:layout_height="59dp"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/do_you_know_your_body_mass_index_bmi"
+                    android:textColor="#040000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/mhtextViewNumberQ6"
+                    app:layout_constraintStart_toEndOf="@+id/mhtextViewNumberQ6" />
+
+                <RadioGroup
+                    android:id="@+id/mhRadioGroupQ1"
+                    android:layout_width="322dp"
+                    android:layout_height="57dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:verticalScrollbarPosition="defaultPosition"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion1">
+
+                    <RadioButton
+                        android:id="@+id/mhYradioButtonQ1"
+                        android:layout_width="145dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:textColor="#040000"
+                        tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
+
+                    <RadioButton
+                        android:id="@+id/mhNradioButtonQ1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:textColor="#090000"
+                        tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/mhradioGroupQ2"
+                    android:layout_width="318dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion2">
+
+                    <RadioButton
+                        android:id="@+id/mhyradioButtonQ2"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:textColor="#070000"
+                        tools:ignore="TextContrastCheck" />
+
+                    <RadioButton
+                        android:id="@+id/mhnradioButtonQ2"
+                        android:layout_width="161dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:textColor="#0B0000"
+                        tools:ignore="TextContrastCheck" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/mhtextViewNumberQ4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/_4"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhradioGroupQ3" />
+
+                <TextView
+                    android:id="@+id/mhtextViewNumberQ5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="140dp"
+                    android:text="@string/_5"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhradioGroupQ4" />
+
+                <TextView
+                    android:id="@+id/mhtextViewNumberQ6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/_6"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhradioGroupQ5" />
+
+                <RadioGroup
+                    android:id="@+id/mhradioGroupQ4"
+                    android:layout_width="343dp"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion4">
+
+                    <RadioButton
+                        android:id="@+id/mhyradioButtonQ4"
+                        android:layout_width="163dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/yes"
+                        android:textColor="#070000"
+                        tools:ignore="TextContrastCheck" />
+
+                    <RadioButton
+                        android:id="@+id/mhnradioButtonQ4"
+                        android:layout_width="171dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:textColor="#0B0000"
+                        tools:ignore="TextContrastCheck" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/mhradioGroupQ5"
+                    android:layout_width="347dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion">
+
+                    <RadioButton
+                        android:id="@+id/mhyradioButtonQ5"
+                        android:layout_width="166dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/yes"
+                        android:textColor="#070000"
+                        tools:ignore="TextContrastCheck" />
+
+                    <RadioButton
+                        android:id="@+id/mhnradioButtonQ5"
+                        android:layout_width="171dp"
+                        android:layout_height="61dp"
+                        android:layout_weight="1"
+                        android:text="@string/no"
+                        android:textColor="#0B0000"
+                        tools:ignore="TextContrastCheck" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="344dp"
+                    android:layout_height="73dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion5">
+
+                    <RadioButton
+                        android:id="@+id/mhyradioButtonQ6"
+                        android:layout_width="152dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="@string/yes"
+                        android:textColor="#070000"
+                        tools:ignore="TextContrastCheck" />
+
+                    <RadioButton
+                        android:id="@+id/mhnradioButtonQ6"
+                        android:layout_width="161dp"
+                        android:layout_height="61dp"
+                        android:layout_weight="1"
+                        android:text="@string/no"
+                        android:textColor="#0B0000"
+                        tools:ignore="TextContrastCheck" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/previous"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/next"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/do_you_have_a_heart_problem"
-        android:textColor="#040000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/mhRadioGroupQ1"
-        app:layout_constraintStart_toEndOf="@+id/mhtextViewNumber1"
-        app:layout_constraintTop_toBottomOf="@+id/MHMLayoutBarreHaut"
-        app:layout_constraintVertical_bias="0.528" />
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintGuide_percent="0.05109489"
+        app:layout_constraintTop_toBottomOf="@+id/guideline3" />
 
-    <TextView
-        android:id="@+id/mhQuestion2"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="@string/do_you_have_a_cholesterol_problem"
-        android:textColor="#040000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/mhradioGroupQ2"
-        app:layout_constraintStart_toEndOf="@+id/mhtextViewNumberQ2"
-        app:layout_constraintTop_toBottomOf="@+id/mhRadioGroupQ1"
-        app:layout_constraintVertical_bias="0.55" />
-
-    <TextView
-        android:id="@+id/mhQuestion3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/are_you_diabetic"
-        android:textColor="#040000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.272"
-        app:layout_constraintStart_toEndOf="@+id/mhtextViewNumberQ3"
-        app:layout_constraintTop_toBottomOf="@+id/mhradioGroupQ2" />
-
-    <TextView
-        android:id="@+id/mhQuestion4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="60dp"
-        android:text="@string/do_you_have_high_blood_pressure"
-        android:textColor="#040000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/mhtextViewNumberQ4"
-        app:layout_constraintTop_toBottomOf="@+id/mhradioGroupQ3" />
-
-    <RadioGroup
-        android:id="@+id/mhradioGroupQ2"
-        android:layout_width="326dp"
-        android:layout_height="57dp"
+        android:layout_marginBottom="36dp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mhtextViewNumberQ2">
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintGuide_percent="-0.049247608"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <RadioButton
-            android:id="@+id/mhyradioButtonQ2"
-            android:layout_width="137dp"
-            android:layout_height="wrap_content"
-            android:text="@string/yes"
-            android:textColor="#070000"
-            tools:ignore="TextContrastCheck" />
-
-        <RadioButton
-            android:id="@+id/mhnradioButtonQ2"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:text="@string/no"
-            android:textColor="#0B0000"
-            tools:ignore="TextContrastCheck" />
-
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/mhradioGroupQ3"
-        android:layout_width="346dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mhQuestion3">
-
-        <RadioButton
-            android:id="@+id/mhyradioButtonQ3"
-            android:layout_width="158dp"
-            android:layout_height="wrap_content"
-            android:text="@string/yes"
-            android:textColor="#070000"
-            tools:ignore="TextContrastCheck" />
-
-        <RadioButton
-            android:id="@+id/mhnradioButtonQ3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/no"
-            android:textColor="#0B0000"
-            tools:ignore="TextContrastCheck" />
-
-    </RadioGroup>
-
-    <RadioGroup
-        android:id="@+id/mhradioGroupQ4"
-        android:layout_width="334dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mhQuestion4">
-
-        <RadioButton
-            android:id="@+id/mhyradioButtonQ4"
-            android:layout_width="166dp"
-            android:layout_height="wrap_content"
-            android:text="@string/yes"
-            android:textColor="#070000"
-            tools:ignore="TextContrastCheck" />
-
-        <RadioButton
-            android:id="@+id/mhnradioButtonQ4"
-            android:layout_width="159dp"
-            android:layout_height="wrap_content"
-            android:text="@string/no"
-            android:textColor="#0B0000"
-            tools:ignore="TextContrastCheck" />
-    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
