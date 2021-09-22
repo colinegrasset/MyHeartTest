@@ -37,4 +37,5 @@
     <string name="error_enter_name">You must enter your name to start the test.</string>
     <string name="_45" translatable="false">45</string>
     <string name="error_next_step">You must answer all questions.</string>
+    <string name="finish_test">Finish test</string>
 </resources>

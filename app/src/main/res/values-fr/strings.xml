@@ -35,4 +35,5 @@
     <string name="have_you_ever_seen_a_cardiologist">"Avez-vous déjà consulté un cardiologue ?  "</string>
     <string name="error_enter_name">Vous devez saisir votre nom pour démarrer le test.</string>
     <string name="error_next_step">Vous devez répondre à toutes les questions.</string>
+    <string name="finish_test">Terminer le test</string>
 </resources>
