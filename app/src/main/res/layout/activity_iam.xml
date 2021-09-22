@@ -124,37 +124,6 @@
             android:textSize="16sp" />
     </RadioGroup>
 
-    <RadioGroup
-        android:id="@+id/MHMRadioGroupQ2"
-        android:layout_width="263dp"
-        android:layout_height="148dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion2">
-
-        <RadioButton
-            android:id="@+id/MHMradioButtonQ2Yes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/less_than_40_years_old"
-            android:textSize="16sp" />
-
-        <RadioButton
-            android:id="@+id/MHMradioButtonQ2No"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/between_40_and_60_years_old"
-            android:textSize="16sp" />
-
-        <RadioButton
-            android:id="@+id/radioButtonMore60"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/more_than_60_years_old"
-            android:textSize="16sp" />
-    </RadioGroup>
-
     <Button
         android:id="@+id/MHMbuttonPrevious"
         android:layout_width="wrap_content"
@@ -174,4 +143,21 @@
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumberQ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/_45"
+        android:hintTextColor="#757575"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="#A3A1A1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion2"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

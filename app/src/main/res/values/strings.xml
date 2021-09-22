@@ -31,4 +31,5 @@
     <string name="do_you_have_a_first_degree_relative_father_mother_brother_or_sister_who_had_heart_problems_heart_attack_stroke_sudden_death_before_age_55_for_a_man_or_before_age_65_for_a_woman">Do you have a first-degree relative (father, mother, brother or sister) who had heart problems (heart attack, stroke, sudden death) before age 55 for a man or before age 65 for a woman?</string>
     <string name="_6" translatable="false">6</string>
     <string name="do_you_know_your_body_mass_index_bmi">Do you know your body mass index (BMI)?</string>
+    <string name="_45" translatable="false">45</string>
 </resources>
