@@ -31,4 +31,5 @@
     <string name="have_you_already_reviewed_your_cardiovascular_risk_with_your_doctor">Avez-vous déjà fait le point avec votre médecin traitant à propos de votre risque cardiovasculaire ?</string>
     <string name="have_you_ever_had_a_heart_checkup">Avez-vous déjà effectué un bilan cardiaque ?</string>
     <string name="have_you_ever_seen_a_cardiologist">"Avez-vous déjà consulté un cardiologue ?  "</string>
+    <string name="error_enter_name">Vous devez saisir votre nom pour démarrer le test.</string>
 </resources>

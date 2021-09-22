@@ -30,4 +30,5 @@
     <string name="have_you_already_reviewed_your_cardiovascular_risk_with_your_doctor">Have you already reviewed your cardiovascular risk with your doctor?</string>
     <string name="have_you_ever_had_a_heart_checkup">Have you ever had a heart checkup?</string>
     <string name="have_you_ever_seen_a_cardiologist">Have you ever seen a cardiologist?</string>
+    <string name="error_enter_name">You must enter your name to start the test.</string>
 </resources>
