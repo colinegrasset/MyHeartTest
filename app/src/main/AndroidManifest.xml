@@ -12,6 +12,12 @@
         <activity
             android:name=".IAm"
             android:exported="true" />
+        <activity
+            android:name=".myHeart"
+            android:exported="true" />
+        <activity
+            android:name=".MyHeartMonito"
+            android:exported="true" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
