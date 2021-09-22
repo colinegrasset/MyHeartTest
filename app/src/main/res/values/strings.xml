@@ -36,4 +36,5 @@
     <string name="have_you_ever_seen_a_cardiologist">Have you ever seen a cardiologist?</string>
     <string name="error_enter_name">You must enter your name to start the test.</string>
     <string name="_45" translatable="false">45</string>
+    <string name="error_next_step">You must answer all questions.</string>
 </resources>
