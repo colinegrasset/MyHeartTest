@@ -152,7 +152,6 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/_45"
-        android:hintTextColor="#757575"
         android:importantForAutofill="no"
         android:inputType="number"
         android:minHeight="48dp"
