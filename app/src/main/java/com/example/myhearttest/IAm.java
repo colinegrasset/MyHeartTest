@@ -25,14 +25,13 @@ public class IAm extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iam);
+        person = new Personne();
         processIntentData();
         ageQ2 = (EditText) findViewById(R.id.MHMEditTextNumberQ2);
         buttonQ1Man = (RadioButton) findViewById(R.id.MHMradioButtonQ1Yes);
         buttonQ1Woman = (RadioButton) findViewById(R.id.MHMradioButtonQ1No);
-        radioGroupQ1 = (RadioGroup) findViewById(R.id.MHMRadioGroupQ1);
+        radioGroupQ1 = (RadioGroup) findViewById(R.id.IAmRadioGroupQ1);
         Log.d("IAmOnCreate", "page IAm");
-        person = new Personne();
-
     }
 
     // This method (whose name is abritrary) is called by onCreate().
@@ -62,13 +61,21 @@ public class IAm extends AppCompatActivity {
 
     public void nextStep(View view) {
         Log.d("IAmNextStep", "bouton next step");
+        Log.d("IAmNextStepName", person.getName());
         if ((ageQ2.getText().toString().equals("")) | (radioGroupQ1.getCheckedRadioButtonId() == -1)){
             Toast.makeText(this,R.string.error_next_step, Toast.LENGTH_LONG).show();
         }else{
-            Intent intent;
-            intent = new Intent(this, myHeart.class);
-            intent.putExtra("inputage", ageQ2.getText().toString());
-            startActivity(intent);
+            String Sexe = ((RadioButton)findViewById(radioGroupQ1.getCheckedRadioButtonId())).getText().toString();
+            if (Sexe.equals("A man") | Sexe.equals("Un homme")){
+                person.setGenre(Genre.MAN);
+            }else if(Sexe.equals("A woman") | Sexe.equals("Une femme")){
+                person.setGenre(Genre.WOMAN);
+            }
+            person.setAge(Integer.parseInt(ageQ2.getText().toString()));
+            Intent intentMyHeart;
+            intentMyHeart = new Intent(this, myHeart.class);
+            intentMyHeart.putExtra("inputpersonne", this.person);
+            startActivity(intentMyHeart);
         }
     }
 }
