@@ -3,102 +3,66 @@ package com.example.myhearttest;
 import android.os.Parcel;
 import android.os.Parcelable;
 import androidx.annotation.NonNull;
+
 /**
  * Class storing data fetched through activities.
  * Must implement Parcelable to be used with Intents.
  * https://developer.android.com/reference/android/os/Parcelable#java
  */
 public class Personne implements Parcelable {
-    //variables ecrit par le prof
-
     private String name;
-    //private Genre genre;
+    private Genre genre;
     private int age;
     private Boolean cardiacCheckUp;
+    private Boolean coeur;
+    private Boolean cholesterol;
+    private Boolean diabetique;
+    private Boolean tension;
+    private Boolean famillePbCoeur;
+    private IMC IMC;
+    private Boolean riskCardio;
+    private Boolean coeurTest;
+    private Boolean cardiologue;
     public static final String DEFAULT_NAME = "UNDEFINED";
-//nos variables personnalisée
-    private String prenom;
-    private Boolean sexe; //homme=false et femme=true;
-   // private Integer age;
-    private boolean coeur;
-    private boolean cholesterol;
-    private boolean diabetique;
-    private boolean tension;
-    private boolean famillePbCoeur;
-    private boolean IMC;
-    private boolean riskCardio;
-    private boolean coeurTest;
-    private boolean cardiologue;
+
     /**
      * Constructor. All members get default values
      */
-   // public Person() {
-       // this.setName(Person.DEFAULT_NAME);
-     //   this.setGenre(Genre.UNDEFINED);
-      //  this.setAge(0);
-       // this.setCardiacCheckUp(false);
-  //  }
+    public Personne() {
+        this.setName(Personne.DEFAULT_NAME);
+        this.setGenre(Genre.UNDEFINED);
+        this.setAge(0);
+        this.setCardiacCheckUp(false);
+        this.setCoeur(false);
+        this.setCholesterol(false);
+        this.setDiabetique(false);
+        this.setTension(false);
+        this.setFamillePbCoeur(false);
+        this.setIMC(IMC.UNDEFINED);
+        this.setRiskCardio(false);
+        this.setCoeurTest(false);
+        this.setCardiologue(false);
+    }
     /**
      * @return the description of this class as a String
      */
-    /*
     @NonNull
     public String toString() {
         StringBuilder sBuilder = new StringBuilder("\t Name: " + this.getName() + "\n");
         sBuilder.append("\t Genre: ").append(this.getGenre()).append("\n");
         sBuilder.append("\t Age: ").append(this.getAge()).append("\n");
         sBuilder.append("\t Cardiac Checkup: ").append(this.getCardiacCheckUp()).append("\n");
+        sBuilder.append("\t Coeur: ").append(this.getCoeur()).append("\n");
+        sBuilder.append("\t Cholesterol: ").append(this.getCholesterol()).append("\n");
+        sBuilder.append("\t Diabetique: ").append(this.getDiabetique()).append("\n");
+        sBuilder.append("\t Tension: ").append(this.getTension()).append("\n");
+        sBuilder.append("\t Family Heart Problems: ").append(this.getFamillePbCoeur()).append("\n");
+        sBuilder.append("\t IMC: ").append(this.getIMC()).append("\n");
+        sBuilder.append("\t Risk cardio: ").append(this.getRiskCardio()).append("\n");
+        sBuilder.append("\t Coeur Test: ").append(this.getCoeurTest()).append("\n");
+        sBuilder.append("\t Cardiologue: ").append(this.getCardiologue()).append("\n");
         return sBuilder.toString();
     }
-
-    private String getName() {
-    }
-
-    private char[] getGenre() {
-    }
-
-    private char[] getAge() {
-    }
-
-    private char[] getCardiacCheckUp() {
-    }*/
-
-    protected Personne(Parcel in) {
-        name = in.readString();
-        age = in.readInt();
-        byte tmpCardiacCheckUp = in.readByte();
-        cardiacCheckUp = tmpCardiacCheckUp == 0 ? null : tmpCardiacCheckUp == 1;
-        prenom = in.readString();
-        byte tmpSexe = in.readByte();
-        sexe = tmpSexe == 0 ? null : tmpSexe == 1;
-       /* if (in.readByte() == 0) {
-            age = null;
-        } else {
-            age = in.readInt();
-        }*/
-        coeur = in.readByte() != 0;
-        cholesterol = in.readByte() != 0;
-        diabetique = in.readByte() != 0;
-        tension = in.readByte() != 0;
-        famillePbCoeur = in.readByte() != 0;
-        IMC = in.readByte() != 0;
-        riskCardio = in.readByte() != 0;
-        coeurTest = in.readByte() != 0;
-        cardiologue = in.readByte() != 0;
-    }
-
-    public static final Creator<Personne> CREATOR = new Creator<Personne>() {
-        @Override
-        public Personne createFromParcel(Parcel in) {
-            return new Personne(in);
-        }
-
-        @Override
-        public Personne[] newArray(int size) {
-            return new Personne[size];
-        }
-    };
-
     /**
      * Display this instance's contents
      */
@@ -108,33 +72,138 @@ public class Personne implements Parcelable {
         System.out.println();
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
+    /*
+        * Getters / Setters
+    */
+    public String getName() { return this.name; }
+    public void setName(String aName) { this.name = aName; }
+    public Genre getGenre() { return this.genre; }
+    public void setGenre(Genre aGenre) { this.genre = aGenre; }
+    public int getAge() { return this.age; }
+    public void setAge(int anAge) { this.age = anAge; }
+    public Boolean getCardiacCheckUp() { return this.cardiacCheckUp; }
+    public void setCardiacCheckUp(Boolean aCardiacCheckUp) { this.cardiacCheckUp = aCardiacCheckUp; }
+    public Boolean getCoeur() { return coeur; }
+    public void setCoeur(Boolean coeur) { this.coeur = coeur; }
+
+    public Boolean getCholesterol() {
+        return cholesterol;
     }
 
-    @Override
+    public void setCholesterol(Boolean cholesterol) {
+        this.cholesterol = cholesterol;
+    }
+
+    public Boolean getDiabetique() {
+        return diabetique;
+    }
+
+    public void setDiabetique(Boolean diabetique) {
+        this.diabetique = diabetique;
+    }
+
+    public Boolean getTension() {
+        return tension;
+    }
+
+    public void setTension(Boolean tension) {
+        this.tension = tension;
+    }
+
+    public Boolean getFamillePbCoeur() {
+        return famillePbCoeur;
+    }
+
+    public void setFamillePbCoeur(Boolean famillePbCoeur) {
+        this.famillePbCoeur = famillePbCoeur;
+    }
+
+    public IMC getIMC() {
+        return IMC;
+    }
+
+    public void setIMC(IMC IMC) {
+        this.IMC = IMC;
+    }
+
+    public Boolean getRiskCardio() {
+        return riskCardio;
+    }
+
+    public void setRiskCardio(Boolean riskCardio) {
+        this.riskCardio = riskCardio;
+    }
+
+    public Boolean getCoeurTest() {
+        return coeurTest;
+    }
+
+    public void setCoeurTest(Boolean coeurTest) {
+        this.coeurTest = coeurTest;
+    }
+
+    public Boolean getCardiologue() {
+        return cardiologue;
+    }
+
+    public void setCardiologue(Boolean cardiologue) {
+        this.cardiologue = cardiologue;
+    }
+
+    @Override // Parcelable method
+    public int describeContents() { return 0;}
+
+    @Override // Parcelable method
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(name);
-        dest.writeInt(age);
-        dest.writeByte((byte) (cardiacCheckUp == null ? 0 : cardiacCheckUp ? 1 : 2));
-        dest.writeString(prenom);
-        dest.writeByte((byte) (sexe == null ? 0 : sexe ? 1 : 2));
-       /* if (age == null) {
-            dest.writeByte((byte) 0);
-        } else {
-            dest.writeByte((byte) 1);
-            dest.writeInt(age);
-        }*/
-        dest.writeByte((byte) (coeur ? 1 : 0));
-        dest.writeByte((byte) (cholesterol ? 1 : 0));
-        dest.writeByte((byte) (diabetique ? 1 : 0));
-        dest.writeByte((byte) (tension ? 1 : 0));
-        dest.writeByte((byte) (famillePbCoeur ? 1 : 0));
-        dest.writeByte((byte) (IMC ? 1 : 0));
-        dest.writeByte((byte) (riskCardio ? 1 : 0));
-        dest.writeByte((byte) (coeurTest ? 1 : 0));
-        dest.writeByte((byte) (cardiologue ? 1 : 0));
+    // Both reading and writing orderings must match (see Person(Parcel in) method)
+        dest.writeString(this.getName());
+        dest.writeInt(this.getGenre().ordinal());
+        dest.writeInt(this.getAge());
+    // dest.writeBoolean() requires API 29
+    // If the error "current min is set to <Number lesser than 29>"
+    // => Edit Gradle scripts -> build.gradle (Module: YourApp.app)
+    // ==> change "minSdK <Number lesser than 29>" to "minSdk 29"
+    // (this SDK must be installed)
+        dest.writeBoolean(this.getCardiacCheckUp());
+        dest.writeBoolean(this.getCoeur());
+        dest.writeBoolean(this.getCholesterol());
+        dest.writeBoolean(this.getDiabetique());
+        dest.writeBoolean(this.getTension());
+        dest.writeBoolean(this.getFamillePbCoeur());
+        dest.writeInt(this.getIMC().ordinal());
+        dest.writeBoolean(this.getRiskCardio());
+        dest.writeBoolean(this.getCoeurTest());
+        dest.writeBoolean(this.getCardiologue());
+    }
+    /**
+     * https://developer.android.com/reference/android/os/Parcelable#java */
+    public static final Parcelable.Creator<Personne> CREATOR
+            = new Parcelable.Creator<Personne>() {
+        public Personne createFromParcel(Parcel in) {
+            return new Personne(in);
+        }
+        public Personne[] newArray(int size) {
+            return new Personne[size];
+        }
+    };
+    /**
+     * https://developer.android.com/reference/android/os/Parcelable#java
+     */
+    private Personne(Parcel in) {
+// Both reading and writing orderings must match (see writeToParcel method)
+        this.setName(in.readString());
+        this.setGenre(Genre.values()[in.readInt()]);
+        this.setAge(in.readInt());
+        this.setCardiacCheckUp(in.readBoolean());
+        this.setCoeur(in.readBoolean());
+        this.setCholesterol(in.readBoolean());
+        this.setDiabetique(in.readBoolean());
+        this.setTension(in.readBoolean());
+        this.setFamillePbCoeur(in.readBoolean());
+        this.setIMC(IMC.values()[in.readInt()]);
+        this.setRiskCardio(in.readBoolean());
+        this.setCoeurTest(in.readBoolean());
+        this.setCardiologue(in.readBoolean());
     }
 }
 
