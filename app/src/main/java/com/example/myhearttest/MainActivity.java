@@ -13,12 +13,13 @@ public class MainActivity extends AppCompatActivity {
 
     public static String TAG = "MainActivity"; // Identifiant pour les messages de log
     private EditText userName;
-    Personne person;
+    private Personne person;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        person = new Personne();
         userName = (EditText) findViewById(R.id.editTextYourName);
         Log.d("MainActivityOnCreate", "Test1");
     }
@@ -29,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         if (userName.getText().toString().equals("")){
             Toast.makeText(this,R.string.error_enter_name, Toast.LENGTH_LONG).show();
         }else{
-            //person.setName(userName.getText().toString());
-            //Log.d("MainActivityStartTestAjoutNamePerson", person.getName());
+            person.setName(userName.getText().toString());
+            Log.d("MainActivityStartTestAjoutNamePerson", person.getName());
             Intent intentIAm;
             intentIAm = new Intent(this, IAm.class);
             intentIAm.putExtra("inputpersonne", this.person);
