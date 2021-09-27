@@ -4,20 +4,34 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class myHeart extends AppCompatActivity {
 
+    private RadioGroup radioGroupQ1;
+    private RadioGroup radioGroupQ2;
+    private RadioGroup radioGroupQ3;
+    private RadioGroup radioGroupQ4;
+    private RadioGroup radioGroupQ5;
+    private RadioGroup radioGroupQ6;
     private Personne person;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myheart);
-        processIntentData();
         person = new Personne();
+        processIntentData();
+        radioGroupQ1 = (RadioGroup) findViewById(R.id.mhRadioGroupQ1);
+        radioGroupQ2 = (RadioGroup) findViewById(R.id.mhradioGroupQ2);
+        radioGroupQ3 = (RadioGroup) findViewById(R.id.mhradioGroupQ3);
+        radioGroupQ4 = (RadioGroup) findViewById(R.id.mhradioGroupQ4);
+        radioGroupQ5 = (RadioGroup) findViewById(R.id.mhradioGroupQ5);
+        radioGroupQ6 = (RadioGroup) findViewById(R.id.mhradioGroupQ6);
         Log.d("myHeartOnCreate", "page myHeart");
     }
 
@@ -49,13 +63,22 @@ public class myHeart extends AppCompatActivity {
     public void nextStep(View view) {
         Log.d("myHeartNextStep", "bouton next step");
         //Ajouter la vérification du remplissage de toutes les réponses
-        //if (ageQ2.getText().toString().equals("")){
-        //    Toast.makeText(this,R.string.error_next_step, Toast.LENGTH_LONG).show();
-        //}else{
-            Intent intent;
-            intent = new Intent(this, MyHeartMonito.class);
-        //    intent.putExtra("inputage", ageQ2.getText().toString());
-            startActivity(intent);
-        //}
+
+
+        if ((radioGroupQ1.getCheckedRadioButtonId() == -1)){
+            Toast.makeText(this,R.string.error_next_step, Toast.LENGTH_LONG).show();
+        }else{
+            // Modifier le getCheckedButtonId par un ISChecked() sur les radioButton
+            String coeur = ((RadioButton)findViewById(radioGroupQ1.getCheckedRadioButtonId())).getText().toString();
+            if (coeur.equals("Yes") | coeur.equals("Oui")){
+                person.setCoeur(true);
+            }else if(coeur.equals("No") | coeur.equals("Non")){
+                person.setCoeur(false);
+            }
+            Intent intentMyHeartMonito;
+            intentMyHeartMonito = new Intent(this, MyHeartMonito.class);
+            intentMyHeartMonito.putExtra("inputpersonne", this.person);
+            startActivity(intentMyHeartMonito);
+        }
     }
 }

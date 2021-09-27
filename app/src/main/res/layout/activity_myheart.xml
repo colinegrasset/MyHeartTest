@@ -76,7 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="70dp"
                     android:text="@string/_1"
                     android:textColor="#C12222"
                     android:textSize="34sp"
@@ -166,7 +166,7 @@
                 <TextView
                     android:id="@+id/mhQuestion2"
                     android:layout_width="340dp"
-                    android:layout_height="49dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:text="@string/do_you_have_a_cholesterol_problem"
                     android:textColor="#040000"
@@ -178,7 +178,7 @@
                 <TextView
                     android:id="@+id/mhQuestion4"
                     android:layout_width="325dp"
-                    android:layout_height="29dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:text="@string/do_you_have_high_blood_pressure"
                     android:textColor="#040000"
@@ -190,7 +190,7 @@
                 <TextView
                     android:id="@+id/mhQuestion"
                     android:layout_width="356dp"
-                    android:layout_height="155dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:text="@string/do_you_have_a_first_degree_relative_father_mother_brother_or_sister_who_had_heart_problems_heart_attack_stroke_sudden_death_before_age_55_for_a_man_or_before_age_65_for_a_woman"
                     android:textColor="#040000"
@@ -202,7 +202,7 @@
                 <TextView
                     android:id="@+id/mhQuestion5"
                     android:layout_width="351dp"
-                    android:layout_height="59dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:text="@string/do_you_know_your_body_mass_index_bmi"
                     android:textColor="#040000"
@@ -366,6 +366,7 @@
                 </RadioGroup>
 
                 <RadioGroup
+                    android:id="@+id/mhradioGroupQ6"
                     android:layout_width="344dp"
                     android:layout_height="73dp"
                     android:layout_marginTop="20dp"

@@ -65,6 +65,7 @@ public class IAm extends AppCompatActivity {
         if ((ageQ2.getText().toString().equals("")) | (radioGroupQ1.getCheckedRadioButtonId() == -1)){
             Toast.makeText(this,R.string.error_next_step, Toast.LENGTH_LONG).show();
         }else{
+            // Modifier le getCheckedRadioButtonId() par un isChecked()
             String Sexe = ((RadioButton)findViewById(radioGroupQ1.getCheckedRadioButtonId())).getText().toString();
             if (Sexe.equals("A man") | Sexe.equals("Un homme")){
                 person.setGenre(Genre.MAN);
