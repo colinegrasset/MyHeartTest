@@ -68,7 +68,7 @@ public class myHeart extends AppCompatActivity {
         if ((radioGroupQ1.getCheckedRadioButtonId() == -1)){
             Toast.makeText(this,R.string.error_next_step, Toast.LENGTH_LONG).show();
         }else{
-            // Modifier le getCheckedButtonId par un ISChecked() sur les radioButton
+            //Todo Modifier le getCheckedButtonId par un ISChecked() sur les radioButton
             String coeur = ((RadioButton)findViewById(radioGroupQ1.getCheckedRadioButtonId())).getText().toString();
             if (coeur.equals("Yes") | coeur.equals("Oui")){
                 person.setCoeur(true);
