@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         person = new Personne();
-        userName = (EditText) findViewById(R.id.editTextYourName);
+        userName = findViewById(R.id.editTextYourName);
         Log.d("MainActivityOnCreate", "Test1");
     }
 

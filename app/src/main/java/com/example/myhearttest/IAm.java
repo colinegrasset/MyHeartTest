@@ -30,7 +30,7 @@ public class IAm extends AppCompatActivity {
         ageQ2 = (EditText) findViewById(R.id.MHMEditTextNumberQ2);
         buttonQ1Man = (RadioButton) findViewById(R.id.MHMradioButtonQ1Yes);
         buttonQ1Woman = (RadioButton) findViewById(R.id.MHMradioButtonQ1No);
-        radioGroupQ1 = (RadioGroup) findViewById(R.id.IAmRadioGroupQ1);
+        radioGroupQ1 = (RadioGroup) findViewById(R.id.MHMRadioGroupQ1);
         Log.d("IAmOnCreate", "page IAm");
     }
 
