@@ -7,17 +7,31 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class myHeart extends AppCompatActivity {
 
+
     private RadioGroup radioGroupQ1;
+    private RadioButton radioYesQ1;
+    private RadioButton radioNoQ1;
+
     private RadioGroup radioGroupQ2;
+    private RadioButton radioYesQ2;
+    private RadioButton radioNoQ2;
+
     private RadioGroup radioGroupQ3;
+    private RadioButton radioYesQ3;
+    private RadioButton radioNoQ3;
+
     private RadioGroup radioGroupQ4;
-    private RadioGroup radioGroupQ5;
+    private  RadioButton radioYesQ4;
+    private RadioButton radioNoQ4;
+
+    private Switch switchQ5;
     private Spinner spinnerQ6;
     private Personne person;
 
@@ -28,11 +42,24 @@ public class myHeart extends AppCompatActivity {
         person = new Personne();
         processIntentData();
         radioGroupQ1 = (RadioGroup) findViewById(R.id.mhRadioGroupQ1);
+        radioYesQ1 = (RadioButton) findViewById(R.id.mhYradioButtonQ1);
+        radioNoQ1 = (RadioButton) findViewById(R.id.mhNradioButtonQ1);
+
         radioGroupQ2 = (RadioGroup) findViewById(R.id.mhradioGroupQ2);
+        radioYesQ2 = (RadioButton) findViewById(R.id.mhyradioButtonQ2);
+        radioNoQ2 = (RadioButton) findViewById(R.id.mhnradioButtonQ2);
+
         radioGroupQ3 = (RadioGroup) findViewById(R.id.mhradioGroupQ3);
+        radioYesQ3 = (RadioButton) findViewById(R.id.mhyradioButtonQ3);
+        radioNoQ3 = (RadioButton) findViewById(R.id.mhnradioButtonQ3);
+
         radioGroupQ4 = (RadioGroup) findViewById(R.id.mhradioGroupQ4);
-        radioGroupQ5 = (RadioGroup) findViewById(R.id.mhradioGroupQ5);
-        spinnerQ6 = (Spinner) findViewById(R.id.spinnerQ6);
+        radioYesQ4 = (RadioButton) findViewById(R.id.mhyradioButtonQ4);
+        radioNoQ4 = (RadioButton) findViewById(R.id.mhnradioButtonQ4);
+
+        switchQ5 = (Switch) findViewById(R.id.mhSwitchQ5);
+        spinnerQ6 = (Spinner) findViewById(R.id.mhspinnerQ6);
+        Log.d("spinnerQ6",spinnerQ6.getSelectedItem().toString());
         Log.d("myHeartOnCreate", "page myHeart");
     }
 
@@ -66,16 +93,39 @@ public class myHeart extends AppCompatActivity {
         //Ajouter la vérification du remplissage de toutes les réponses
 
 
-        if ((radioGroupQ1.getCheckedRadioButtonId() == -1)){
-            Toast.makeText(this,R.string.error_next_step, Toast.LENGTH_LONG).show();
-        }else{
-            //Todo Modifier le getCheckedButtonId par un ISChecked() sur les radioButton
-            String coeur = ((RadioButton)findViewById(radioGroupQ1.getCheckedRadioButtonId())).getText().toString();
-            if (coeur.equals("Yes") | coeur.equals("Oui")){
+        if ((radioGroupQ1.getCheckedRadioButtonId() == -1)|
+                (radioGroupQ2.getCheckedRadioButtonId() == -1)|
+                (radioGroupQ3.getCheckedRadioButtonId() == -1)|
+                (radioGroupQ4.getCheckedRadioButtonId() == -1)|
+                (spinnerQ6.getSelectedItem().toString() == null)) {
+            Toast.makeText(this, R.string.error_next_step, Toast.LENGTH_LONG).show();
+        } else {
+            if (radioYesQ1.isChecked()) {
                 person.setCoeur(true);
-            }else if(coeur.equals("No") | coeur.equals("Non")){
+            } else if (radioYesQ2.isChecked()) {
                 person.setCoeur(false);
             }
+
+            if (radioYesQ2.isChecked()) {
+                person.setCholesterol(true);
+            } else if (radioYesQ2.isChecked()) {
+                person.setCholesterol(false);
+            }
+
+            if (radioYesQ3.isChecked()) {
+                person.setDiabetique(true);
+            } else if (radioYesQ3.isChecked()) {
+                person.setDiabetique(false);
+            }
+
+            if (radioYesQ4.isChecked()) {
+                person.setTension(true);
+            } else if (radioYesQ4.isChecked()) {
+                person.setTension(false);
+            }
+            //ToDo recuperer switch et reponse spinner
+            //ToDo voir si les attributs on recuperer les reponses
+
             Intent intentMyHeartMonito;
             intentMyHeartMonito = new Intent(this, MyHeartMonito.class);
             intentMyHeartMonito.putExtra("inputpersonne", this.person);

@@ -36,4 +36,5 @@
     <string name="error_enter_name">Vous devez saisir votre nom pour démarrer le test.</string>
     <string name="error_next_step">Vous devez répondre à toutes les questions.</string>
     <string name="finish_test">Terminer le test</string>
+    <string name="yes_there_is_someone">Si oui allumer le bouton</string>
 </resources>

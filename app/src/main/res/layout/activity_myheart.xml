@@ -300,13 +300,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="60dp"
                     android:text="@string/_6"
                     android:textColor="#C12222"
                     android:textSize="34sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mhradioGroupQ5" />
+                    app:layout_constraintTop_toBottomOf="@+id/mhSwitchQ5" />
 
                 <RadioGroup
                     android:id="@+id/mhradioGroupQ4"
@@ -336,35 +336,6 @@
                         tools:ignore="TextContrastCheck" />
                 </RadioGroup>
 
-                <RadioGroup
-                    android:id="@+id/mhradioGroupQ5"
-                    android:layout_width="347dp"
-                    android:layout_height="70dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion">
-
-                    <RadioButton
-                        android:id="@+id/mhyradioButtonQ5"
-                        android:layout_width="166dp"
-                        android:layout_height="match_parent"
-                        android:text="@string/yes"
-                        android:textColor="#070000"
-                        tools:ignore="TextContrastCheck" />
-
-                    <RadioButton
-                        android:id="@+id/mhnradioButtonQ5"
-                        android:layout_width="171dp"
-                        android:layout_height="61dp"
-                        android:layout_weight="1"
-                        android:text="@string/no"
-                        android:textColor="#0B0000"
-                        tools:ignore="TextContrastCheck" />
-                </RadioGroup>
-
                 <Button
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
@@ -388,7 +359,7 @@
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <Spinner
-                    android:id="@+id/spinnerQ6"
+                    android:id="@+id/mhspinnerQ6"
                     android:layout_width="296dp"
                     android:layout_height="48dp"
                     android:layout_marginTop="20dp"
@@ -399,6 +370,17 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/mhQuestion5"
                     tools:visibility="visible" />
+
+                <Switch
+                    android:id="@+id/mhSwitchQ5"
+                    android:layout_width="210dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/yes_there_is_someone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
