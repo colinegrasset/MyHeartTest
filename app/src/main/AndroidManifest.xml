@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyHeartTest">
         <activity
+            android:name=".TestResult"
+            android:exported="true" />
+        <activity
             android:name=".IAm"
             android:exported="true" />
         <activity

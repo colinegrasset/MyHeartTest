@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +18,7 @@ public class myHeart extends AppCompatActivity {
     private RadioGroup radioGroupQ3;
     private RadioGroup radioGroupQ4;
     private RadioGroup radioGroupQ5;
-    private RadioGroup radioGroupQ6;
+    private Spinner spinnerQ6;
     private Personne person;
 
     @Override
@@ -31,7 +32,7 @@ public class myHeart extends AppCompatActivity {
         radioGroupQ3 = (RadioGroup) findViewById(R.id.mhradioGroupQ3);
         radioGroupQ4 = (RadioGroup) findViewById(R.id.mhradioGroupQ4);
         radioGroupQ5 = (RadioGroup) findViewById(R.id.mhradioGroupQ5);
-        radioGroupQ6 = (RadioGroup) findViewById(R.id.mhradioGroupQ6);
+        spinnerQ6 = (Spinner) findViewById(R.id.spinnerQ6);
         Log.d("myHeartOnCreate", "page myHeart");
     }
 

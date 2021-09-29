@@ -365,36 +365,6 @@
                         tools:ignore="TextContrastCheck" />
                 </RadioGroup>
 
-                <RadioGroup
-                    android:id="@+id/mhradioGroupQ6"
-                    android:layout_width="344dp"
-                    android:layout_height="73dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion5">
-
-                    <RadioButton
-                        android:id="@+id/mhyradioButtonQ6"
-                        android:layout_width="152dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="@string/yes"
-                        android:textColor="#070000"
-                        tools:ignore="TextContrastCheck" />
-
-                    <RadioButton
-                        android:id="@+id/mhnradioButtonQ6"
-                        android:layout_width="161dp"
-                        android:layout_height="61dp"
-                        android:layout_weight="1"
-                        android:text="@string/no"
-                        android:textColor="#0B0000"
-                        tools:ignore="TextContrastCheck" />
-                </RadioGroup>
-
                 <Button
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
@@ -418,11 +388,17 @@
                     app:layout_constraintEnd_toEndOf="parent" />
 
                 <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="414dp"
-                    android:layout_height="wrap_content"
-                    tools:layout_editor_absoluteX="1dp"
-                    tools:layout_editor_absoluteY="1014dp" />
+                    android:id="@+id/spinnerQ6"
+                    android:layout_width="296dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:entries="@array/IMCchoice"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion5"
+                    tools:visibility="visible" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
