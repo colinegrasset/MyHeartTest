@@ -53,4 +53,12 @@
     <string name="legumes">Legumes</string>
     <string name="cakes_and_or_sweets">Cakes and/or sweets</string>
     <string name="Default_value">Select your BMI category</string>
+    <string name="_1_or_less">1 or less</string>
+    <string name="between_2_and_4">Between 2 and 4</string>
+    <string name="more_than_4">More than 4</string>
+    <string name="how_many_meals_do_you_eat_per_day">What meals do you eat during the day?</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="diner">Diner</string>
+    <string name="snacking">Snacking</string>
 </resources>
