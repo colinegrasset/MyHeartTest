@@ -2,6 +2,7 @@ package com.example.myhearttest;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+
 import androidx.annotation.NonNull;
 
 /**
@@ -19,7 +20,7 @@ public class Personne implements Parcelable {
     private Boolean diabetique;
     private Boolean tension;
     private Boolean famillePbCoeur;
-    private IMC IMC;
+    private String IMC;
     private Boolean riskCardio;
     private Boolean coeurTest;
     private Boolean cardiologue;
@@ -38,7 +39,7 @@ public class Personne implements Parcelable {
         this.setDiabetique(false);
         this.setTension(false);
         this.setFamillePbCoeur(false);
-        this.setIMC(IMC.UNDEFINED);
+        this.setIMC(Personne.DEFAULT_NAME);
         this.setRiskCardio(false);
         this.setCoeurTest(false);
         this.setCardiologue(false);
@@ -118,11 +119,11 @@ public class Personne implements Parcelable {
         this.famillePbCoeur = famillePbCoeur;
     }
 
-    public IMC getIMC() {
+    public String getIMC() {
         return IMC;
     }
 
-    public void setIMC(IMC IMC) {
+    public void setIMC(String IMC) {
         this.IMC = IMC;
     }
 
@@ -170,7 +171,7 @@ public class Personne implements Parcelable {
         dest.writeBoolean(this.getDiabetique());
         dest.writeBoolean(this.getTension());
         dest.writeBoolean(this.getFamillePbCoeur());
-        dest.writeInt(this.getIMC().ordinal());
+        dest.writeString(this.getIMC());
         dest.writeBoolean(this.getRiskCardio());
         dest.writeBoolean(this.getCoeurTest());
         dest.writeBoolean(this.getCardiologue());
@@ -200,10 +201,12 @@ public class Personne implements Parcelable {
         this.setDiabetique(in.readBoolean());
         this.setTension(in.readBoolean());
         this.setFamillePbCoeur(in.readBoolean());
-        this.setIMC(IMC.values()[in.readInt()]);
+        this.setIMC(in.readString());
         this.setRiskCardio(in.readBoolean());
         this.setCoeurTest(in.readBoolean());
         this.setCardiologue(in.readBoolean());
     }
+
+
 }
 

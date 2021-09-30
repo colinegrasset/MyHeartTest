@@ -97,7 +97,7 @@ public class myHeart extends AppCompatActivity {
                 (radioGroupQ2.getCheckedRadioButtonId() == -1)|
                 (radioGroupQ3.getCheckedRadioButtonId() == -1)|
                 (radioGroupQ4.getCheckedRadioButtonId() == -1)|
-                (spinnerQ6.getSelectedItem().toString() == null)) {
+                (spinnerQ6.getSelectedItem().toString().equals(""))) {
             Toast.makeText(this, R.string.error_next_step, Toast.LENGTH_LONG).show();
         } else {
             if (radioYesQ1.isChecked()) {
@@ -123,8 +123,19 @@ public class myHeart extends AppCompatActivity {
             } else if (radioYesQ4.isChecked()) {
                 person.setTension(false);
             }
-            //ToDo recuperer switch et reponse spinner
+
+            if(switchQ5.isChecked()){
+                person.setFamillePbCoeur(true);
+            }
+            else {
+                person.setFamillePbCoeur(true);
+            }
+
+            person.setIMC(spinnerQ6.getSelectedItem().toString());
+
+
             //ToDo voir si les attributs on recuperer les reponses
+            //ToDo Voir si les attribut spinner son bien traduit
 
             Intent intentMyHeartMonito;
             intentMyHeartMonito = new Intent(this, MyHeartMonito.class);

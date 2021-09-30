@@ -37,4 +37,10 @@
     <string name="error_next_step">Vous devez répondre à toutes les questions.</string>
     <string name="finish_test">Terminer le test</string>
     <string name="yes_there_is_someone">Si oui allumer le bouton</string>
+    <string name="Poids_insuffisant">"Poids insuffisant (IMC &lt; 18,5) "</string>
+    <string name="Poids_normal">Poids normal (18,5 &lt; IMC &lt; 24,9)</string>
+    <string name="Embonpoint">Embonpoint (30,0 &lt; IMC &lt; 34,9)</string>
+    <string name="Obesite_classe_I">Obésité classe I (30,0 &lt; IMC &lt; 34,9)</string>
+    <string name="Obesite_classe_II">Obésité classe II (35,0 &lt; IMC &lt;39,9)</string>
+    <string name="Obesite_classe_III">Obésité classe III (IMC &gt; 40,0)</string>
 </resources>

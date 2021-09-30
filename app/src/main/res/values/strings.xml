@@ -39,4 +39,10 @@
     <string name="error_next_step">You must answer all questions.</string>
     <string name="finish_test">Finish test</string>
     <string name="yes_there_is_someone">If yes, switch on the button</string>
+    <string name="Poids_insuffisant">Underweight (BMI &lt;18.5)</string>
+    <string name="Poids_normal">Normal weight (18,5 &lt; BMI &lt; 24,9)</string>
+    <string name="Embonpoint">Overweight (30,0 &lt; BMI &lt; 34,9)</string>
+    <string name="Obesite_classe_I">Obesity class I (30,0 &lt; BMI &lt; 34,9)</string>
+    <string name="Obesite_classe_II">Obesity class II(35,0 &lt; BMI &lt;39,9)</string>
+    <string name="Obesite_classe_III">Obesity class III (BMI &gt; 40,0)</string>
 </resources>
