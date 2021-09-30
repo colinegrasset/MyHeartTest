@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".myHabitDiet">
 
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/starchy_foods"
+        app:layout_constraintStart_toStartOf="@+id/checkBox2"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+
     <TextView
         android:id="@+id/MHMtextViewNumber2"
         android:layout_width="wrap_content"
@@ -17,11 +25,24 @@
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MHMRadioGroupQ1" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+
+    <TextView
+        android:id="@+id/MHMtextViewQuestion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="4dp"
+        android:text="@string/how_old_are_you"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/MHMtextViewNumber2"
+        app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber2" />
 
     <LinearLayout
         android:id="@+id/MHMLayoutBarreHaut"
-        android:layout_width="356dp"
+        android:layout_width="380dp"
         android:layout_height="20dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
@@ -65,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="My habit diet"
+            android:text="@string/my_habit_diet"
             android:textAlignment="center"
             android:textColor="#CA2626"
             android:textStyle="bold" />
@@ -90,51 +111,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:text="@string/i_am_question"
+        android:text="@string/what_do_you_eat_on_a_daily_basis"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/MHMtextViewNumber1"
         app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber1" />
-
-    <TextView
-        android:id="@+id/MHMtextViewQuestion2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:text="@string/how_old_are_you"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/MHMtextViewNumber2"
-        app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber2" />
-
-    <RadioGroup
-        android:id="@+id/MHMRadioGroupQ1"
-        android:layout_width="135dp"
-        android:layout_height="97dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion1">
-
-        <RadioButton
-            android:id="@+id/MHMradioButtonQ1Yes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/a_man"
-            android:textColor="#616161"
-            android:textSize="16sp"
-            tools:ignore="TextContrastCheck" />
-
-        <RadioButton
-            android:id="@+id/MHMradioButtonQ1No"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:text="@string/a_woman"
-            android:textSize="16sp" />
-    </RadioGroup>
 
     <Button
         android:id="@+id/MHMbuttonPrevious"
@@ -158,20 +140,38 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <EditText
-        android:id="@+id/MHMEditTextNumberQ2"
+    <CheckBox
+        android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="@string/_45"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textColorHint="#A3A1A1"
+        android:text="@string/meat"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion2"
-        tools:ignore="TextContrastCheck,TextContrastCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion1" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fruits_and_or_vegetables"
+        app:layout_constraintStart_toStartOf="@+id/checkBox"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/legumes"
+        app:layout_constraintStart_toStartOf="@+id/checkBox3"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cakes_and_or_sweets"
+        app:layout_constraintStart_toStartOf="@+id/checkBox4"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

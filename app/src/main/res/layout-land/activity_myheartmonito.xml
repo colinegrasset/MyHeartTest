@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:id="@+id/MHMLayoutBarreHaut"
-        android:layout_width="356dp"
+        android:layout_width="380dp"
         android:layout_height="20dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
@@ -45,6 +45,7 @@
             android:layout_weight="1"
             android:text="@string/my_heart_monitoring"
             android:textAlignment="center"
+            android:textColor="#CA2626"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -55,7 +56,7 @@
             android:layout_weight="1"
             android:text="My habit diet"
             android:textAlignment="center"
-            android:textColor="#CA2626"
+            android:textColor="#716D6D"
             android:textStyle="bold" />
 
     </LinearLayout>

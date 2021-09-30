@@ -17,8 +17,8 @@
     <string name="between_40_and_60_years_old">Entre 40 et 60 ans</string>
     <string name="more_than_60_years_old">Plus de 60 ans</string>
     <string name="i_am">Je suis</string>
-    <string name="my_heart">Mon coeur</string>
-    <string name="my_heart_monitoring">Mon suivi Cardiaque</string>
+    <string name="my_heart">Coeur</string>
+    <string name="my_heart_monitoring">Suivi cardiaque</string>
     <string name="a_man">Un Homme</string>
     <string name="i_am_question">Je suis:</string>
     <string name="a_woman">Une femme</string>
@@ -43,4 +43,11 @@
     <string name="Obesite_classe_I">Obésité classe I (30,0 &lt; IMC &lt; 34,9)</string>
     <string name="Obesite_classe_II">Obésité classe II (35,0 &lt; IMC &lt;39,9)</string>
     <string name="Obesite_classe_III">Obésité classe III (IMC &gt; 40,0)</string>
+    <string name="my_habit_diet">Habitudes alimentaires</string>
+    <string name="what_do_you_eat_on_a_daily_basis">Qu\'est ce que vous mangez dans une journée ?</string>
+    <string name="meat">Viande</string>
+    <string name="fruits_and_or_vegetables">Fruits et/ou légumes</string>
+    <string name="starchy_foods">Féculents</string>
+    <string name="legumes">Légumineuses</string>
+    <string name="cakes_and_or_sweets">Gâteaux et/ou sucreries</string>
 </resources>
