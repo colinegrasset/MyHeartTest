@@ -44,4 +44,12 @@
     <string name="starchy_foods">Féculents</string>
     <string name="legumes">Légumineuses</string>
     <string name="cakes_and_or_sweets">Gâteaux et/ou sucreries</string>
+    <string name="_1_or_less">1 ou moins</string>
+    <string name="between_2_and_4">Entre 2 et 4</string>
+    <string name="more_than_4">Plus de 4</string>
+    <string name="how_many_meals_do_you_eat_per_day">Quels repas prenez-vous dans la journée ?</string>
+    <string name="breakfast">Petit-déjeuner</string>
+    <string name="lunch">Déjeuner</string>
+    <string name="diner">Dîner</string>
+    <string name="snacking">Grignotage</string>
 </resources>
