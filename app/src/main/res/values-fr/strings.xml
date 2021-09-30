@@ -50,4 +50,5 @@
     <string name="starchy_foods">Féculents</string>
     <string name="legumes">Légumineuses</string>
     <string name="cakes_and_or_sweets">Gâteaux et/ou sucreries</string>
+    <string name="Default_value">Selectionner votre catégorie IMC</string>
 </resources>

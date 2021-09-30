@@ -2,12 +2,14 @@
 <resources>
 
     <string-array name="IMCchoice">
-        <item language="English">@string/Poids_insuffisant </item>
-        <item language="English">@string/Poids_normal </item>
-        <item language="English">@string/Embonpoint </item>
-        <item language="English">@string/Obesite_classe_I </item>
-        <item language="English">@string/Obesite_classe_II </item>
-        <item language="English">@string/Obesite_classe_III </item>
+        <item >@string/Poids_insuffisant </item>
+        <item >@string/Poids_insuffisant </item>
+        <item >@string/Poids_insuffisant </item>
+        <item >@string/Poids_normal </item>
+        <item >@string/Embonpoint </item>
+        <item >@string/Obesite_classe_I </item>
+        <item >@string/Obesite_classe_II </item>
+        <item >@string/Obesite_classe_III </item>
 
     </string-array>
 

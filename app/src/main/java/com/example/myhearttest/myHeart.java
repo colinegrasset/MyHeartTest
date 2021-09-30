@@ -97,7 +97,8 @@ public class myHeart extends AppCompatActivity {
                 (radioGroupQ2.getCheckedRadioButtonId() == -1)|
                 (radioGroupQ3.getCheckedRadioButtonId() == -1)|
                 (radioGroupQ4.getCheckedRadioButtonId() == -1)|
-                (spinnerQ6.getSelectedItem().toString().equals(""))) {
+                (spinnerQ6.getSelectedItem().toString().equals("Select your BMI category"))|
+                (spinnerQ6.getSelectedItem().toString().equals("Selectionner votre catégorie IMC"))) {
             Toast.makeText(this, R.string.error_next_step, Toast.LENGTH_LONG).show();
         } else {
             if (radioYesQ1.isChecked()) {

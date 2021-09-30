@@ -52,4 +52,5 @@
     <string name="starchy_foods">Starchy foods</string>
     <string name="legumes">Legumes</string>
     <string name="cakes_and_or_sweets">Cakes and/or sweets</string>
+    <string name="Default_value">Select your BMI category</string>
 </resources>
