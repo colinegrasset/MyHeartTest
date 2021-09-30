@@ -37,8 +37,8 @@
             android:layout_weight="1"
             android:text="@string/i_am"
             android:textAlignment="center"
-            android:textColor="#CA2626"
-            android:textSize="16sp"
+            android:textColor="#757575"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:layout_weight="1"
             android:text="@string/my_heart"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -58,8 +58,19 @@
             android:layout_weight="1"
             android:text="@string/my_heart_monitoring"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewMyHabitDiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My habit diet"
+            android:textAlignment="center"
+            android:textColor="#CA2626"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
     <TextView

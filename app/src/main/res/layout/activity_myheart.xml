@@ -9,7 +9,7 @@
     tools:context=".IAm">
 
     <LinearLayout
-        android:id="@+id/LayoutBarreHaut"
+        android:id="@+id/MHMLayoutBarreHaut"
         android:layout_width="356dp"
         android:layout_height="20dp"
         android:layout_marginTop="20dp"
@@ -19,35 +19,46 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textViewBarreHautIam"
+            android:id="@+id/MHMtextViewBarreHautIam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/i_am"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textColor="#757575"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewBarreHautMyHeart"
+            android:id="@+id/MHMtextViewBarreHautMyHeart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/my_heart"
             android:textAlignment="center"
-            android:textColor="#CA2626"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewBarreHautMyHeartMonito"
+            android:id="@+id/MHMtextViewBarreHautMyHeartMonito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/my_heart_monitoring"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewMyHabitDiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="My habit diet"
+            android:textAlignment="center"
+            android:textColor="#CA2626"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
     <ScrollView
