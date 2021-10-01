@@ -75,7 +75,7 @@ public class myHabitDiet extends AppCompatActivity {
     public void finishTest(View view) {
         Log.d("IAmNextStep", "bouton next step");
         Log.d("IAmNextStepName", person.getName());
-        if (((checkBoxQ1CakesSweet.isChecked() == false) | (checkBoxQ1Meat.isChecked() == false) | (checkBoxQ1Legumes.isChecked() == false) | (checkBoxQ1FruitsVege.isChecked() == false) | (checkBoxQ1Starchy.isChecked() == false)) & ((chipQ2Breakfast.isChecked() == false)|(chipQ2Lunch.isChecked() == false)|(chipQ2Diner.isChecked() == false)|(chipQ2Snacking.isChecked() == false))){
+        if (((checkBoxQ1CakesSweet.isChecked() == false) & (checkBoxQ1Meat.isChecked() == false) & (checkBoxQ1Legumes.isChecked() == false) & (checkBoxQ1FruitsVege.isChecked() == false) & (checkBoxQ1Starchy.isChecked() == false)) | ((chipQ2Breakfast.isChecked() == false)&(chipQ2Lunch.isChecked() == false)&(chipQ2Diner.isChecked() == false)&(chipQ2Snacking.isChecked() == false))){
             Toast.makeText(this,R.string.error_next_step, Toast.LENGTH_LONG).show();
         }else{
             if(checkBoxQ1CakesSweet.isChecked()){

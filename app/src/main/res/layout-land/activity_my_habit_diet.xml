@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6EDED"
+    tools:context=".myHabitDiet">
+
+    <LinearLayout
+        android:id="@+id/MHMLayoutBarreHaut"
+        android:layout_width="380dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/MHMtextViewBarreHautIam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/i_am"
+            android:textAlignment="center"
+            android:textColor="#757575"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/MHMtextViewBarreHautMyHeart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/my_heart"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/MHMtextViewBarreHautMyHeartMonito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/my_heart_monitoring"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewMyHabitDiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/my_habit_diet"
+            android:textAlignment="center"
+            android:textColor="#CA2626"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="732dp"
+        android:layout_height="358dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="683dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <CheckBox
+                    android:id="@+id/checkBoxStarchy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/starchy_foods"
+                    app:layout_constraintStart_toStartOf="@+id/checkBoxFruitVege"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxFruitVege" />
+
+                <TextView
+                    android:id="@+id/MHMtextViewNumber2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/_2"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxCakesSweet" />
+
+                <TextView
+                    android:id="@+id/MHMtextViewQuestion2"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/how_many_meals_do_you_eat_per_day"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/MHMtextViewNumber2"
+                    app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber2" />
+
+
+                <TextView
+                    android:id="@+id/MHMtextViewNumber1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/_1"
+                    android:textColor="#C12222"
+                    android:textSize="34sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MHMLayoutBarreHaut" />
+
+                <TextView
+                    android:id="@+id/MHMtextViewQuestion1"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/what_do_you_eat_on_a_daily_basis"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/MHMtextViewNumber1"
+                    app:layout_constraintStart_toEndOf="@+id/MHMtextViewNumber1" />
+
+                <Button
+                    android:id="@+id/MHMbuttonPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:onClick="previousStep"
+                    android:text="@string/previous"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/MHMbuttonNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="28dp"
+                    android:onClick="finishTest"
+                    android:text="@string/finish_test"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxMeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/meat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion1" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxFruitVege"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fruits_and_or_vegetables"
+                    app:layout_constraintStart_toStartOf="@+id/checkBoxMeat"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxMeat" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxLegumes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/legumes"
+                    app:layout_constraintStart_toStartOf="@+id/checkBoxStarchy"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxStarchy" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxCakesSweet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cakes_and_or_sweets"
+                    app:layout_constraintStart_toStartOf="@+id/checkBoxLegumes"
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxLegumes" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/ChipGroupQ2"
+                    android:layout_width="204dp"
+                    android:layout_height="146dp"
+                    android:layout_marginStart="240dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion2">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chip1Breakfast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/breakfast"
+                        android:theme="@style/Theme.MaterialComponents.Light" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipLunch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/lunch"
+                        android:theme="@style/Theme.MaterialComponents.Light" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipDiner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/diner"
+                        android:theme="@style/Theme.MaterialComponents.Light" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSnacking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkable="true"
+                        android:text="@string/snacking"
+                        android:theme="@style/Theme.MaterialComponents.Light" />
+
+
+                </com.google.android.material.chip.ChipGroup>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
