@@ -45,7 +45,6 @@
     <string name="Obesite_classe_I">Obesity class I (30,0 &lt; BMI &lt; 34,9)</string>
     <string name="Obesite_classe_II">Obesity class II(35,0 &lt; BMI &lt;39,9)</string>
     <string name="Obesite_classe_III">Obesity class III (BMI &gt; 40,0)</string>
-    <!--<string name="my_habit_diet">My habit diet</string>-->
     <string name="what_do_you_eat_on_a_daily_basis">What do you eat on a daily basis?</string>
     <string name="meat">Meat</string>
     <string name="fruits_and_or_vegetables">Fruits and/or vegetables</string>

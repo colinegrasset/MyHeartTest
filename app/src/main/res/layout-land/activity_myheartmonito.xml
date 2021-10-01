@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="My habit diet"
+            android:text="@string/my_habit_diet"
             android:textAlignment="center"
             android:textColor="#716D6D"
             android:textStyle="bold" />
@@ -63,8 +63,9 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="442dp"
+        android:layout_width="725dp"
+        android:layout_height="322dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MHMLayoutBarreHaut">
@@ -76,7 +77,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="571dp">
+                android:layout_height="match_parent">
 
                 <Button
                     android:id="@+id/MHMbuttonNext"
@@ -84,7 +85,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="30dp"
                     android:layout_marginBottom="30dp"
-                    android:text="@string/finish_test"
+                    android:onClick="nextStep"
+                    android:text="@string/next"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 
@@ -93,10 +95,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
+                    android:layout_marginTop="40dp"
                     android:layout_marginBottom="30dp"
                     android:text="@string/previous"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MHMRadioGroupQ3" />
 
                 <RadioGroup
                     android:id="@+id/MHMRadioGroupQ3"
@@ -122,7 +126,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/no"
                         android:textColor="#616161"
-                        tools:ignore="TextContrastCheck,TextContrastCheck" />
+                        tools:ignore="TextContrastCheck,TextContrastCheck,DuplicateSpeakableTextCheck" />
                 </RadioGroup>
 
                 <TextView

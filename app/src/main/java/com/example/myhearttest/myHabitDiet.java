@@ -72,20 +72,41 @@ public class myHabitDiet extends AppCompatActivity {
         onBackPressed();
     }
 
-    public void nextStep(View view) {
+    public void finishTest(View view) {
         Log.d("IAmNextStep", "bouton next step");
         Log.d("IAmNextStepName", person.getName());
-        if ((checkBoxQ1CakesSweet.isChecked() == false) | (checkBoxQ1Meat.isChecked() == false) | (checkBoxQ1Legumes.isChecked() == false) | (checkBoxQ1FruitsVege.isChecked() == false) | (checkBoxQ1Starchy.isChecked() == false)){
+        if (((checkBoxQ1CakesSweet.isChecked() == false) | (checkBoxQ1Meat.isChecked() == false) | (checkBoxQ1Legumes.isChecked() == false) | (checkBoxQ1FruitsVege.isChecked() == false) | (checkBoxQ1Starchy.isChecked() == false)) & ((chipQ2Breakfast.isChecked() == false)|(chipQ2Lunch.isChecked() == false)|(chipQ2Diner.isChecked() == false)|(chipQ2Snacking.isChecked() == false))){
             Toast.makeText(this,R.string.error_next_step, Toast.LENGTH_LONG).show();
         }else{
-            //if (buttonQ1Man.isChecked()){
-            //    person.setGenre(Genre.MAN);
-            //}else if(buttonQ1Woman.isChecked()){
-            //    person.setGenre(Genre.WOMAN);
-            //}
-            //person.setAge(Integer.parseInt(ageQ2.getText().toString()));
+            if(checkBoxQ1CakesSweet.isChecked()){
+                person.setCakeSweet(true);
+            }
+            if(checkBoxQ1Meat.isChecked()){
+                person.setMeat(true);
+            }
+            if(checkBoxQ1FruitsVege.isChecked()){
+                person.setFruitsVege(true);
+            }
+            if(checkBoxQ1Starchy.isChecked()){
+                person.setStarchy(true);
+            }
+            if(checkBoxQ1Legumes.isChecked()){
+                person.setLegumes(true);
+            }
+            if(chipQ2Breakfast.isChecked()){
+                person.setBreakfast(true);
+            }
+            if(chipQ2Lunch.isChecked()){
+                person.setLunch(true);
+            }
+            if(chipQ2Diner.isChecked()){
+                person.setDiner(true);
+            }
+            if(chipQ2Snacking.isChecked()){
+                person.setSnacking(true);
+            }
             Intent intentMyHeart;
-            intentMyHeart = new Intent(this, myHeart.class);
+            intentMyHeart = new Intent(this, TestResult.class);
             intentMyHeart.putExtra("inputpersonne", this.person);
             startActivity(intentMyHeart);
         }
