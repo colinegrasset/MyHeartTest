@@ -66,7 +66,7 @@ public class MyHeartMonito extends AppCompatActivity {
         onBackPressed();
     }
 
-    public void finishTest(View view) {
+    public void nextStep(View view) {
         Log.d("myHeartMonitoFinishTest", "bouton finish test");
         //Ajouter la vérification du remplissage de toutes les réponses
         if ((radioGroupQ1.getCheckedRadioButtonId() == -1) | (radioGroupQ2.getCheckedRadioButtonId() == -1) | (radioGroupQ3.getCheckedRadioButtonId() == -1)) {
@@ -87,6 +87,10 @@ public class MyHeartMonito extends AppCompatActivity {
             } else if (buttonQ3No.isChecked()) {
                 person.setCardiologue(false);
             }
+            Intent intentMyHeart;
+            intentMyHeart = new Intent(this, myHabitDiet.class);
+            intentMyHeart.putExtra("inputpersonne", this.person);
+            startActivity(intentMyHeart);
         }
     }
 }

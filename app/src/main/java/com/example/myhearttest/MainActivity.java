@@ -38,4 +38,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intentIAm);
         }
     }
+
+    // Todo Commenter tout le code
 }

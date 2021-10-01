@@ -134,8 +134,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="28dp"
-        android:text="@string/next"
-        android:onClick="nextStep"
+        android:onClick="finishTest"
+        android:text="@string/finish_test"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
