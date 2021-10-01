@@ -43,7 +43,7 @@
     <string name="Obesite_classe_I">Obésité classe I (30,0 &lt; IMC &lt; 34,9)</string>
     <string name="Obesite_classe_II">Obésité classe II (35,0 &lt; IMC &lt;39,9)</string>
     <string name="Obesite_classe_III">Obésité classe III (IMC &gt; 40,0)</string>
-    <string name="my_habit_diet">Habitudes alimentaires</string>
+    <string name="my_habit_diet">Habitudes alimentaires:</string>
     <string name="what_do_you_eat_on_a_daily_basis">Qu\'est ce que vous mangez dans une journée ?</string>
     <string name="meat">Viande</string>
     <string name="fruits_and_or_vegetables">Fruits et/ou légumes</string>
@@ -59,4 +59,13 @@
     <string name="lunch">Déjeuner</string>
     <string name="diner">Dîner</string>
     <string name="snacking">Grignotage</string>
+    <string name="go_to_site">Aller au site Officiel</string>
+    <string name="quit">Quitter</string>
+    <string name="test_results">Résultats du test</string>
+    <string name="my_heart_advice">Mes conseils Coeur:</string>
+    <string name="my_heart_monitoring_advice_advice">Mes conseils suivi cardiaque:</string>
+    <string name="textview">Textview</string>
+    <string name="this_is_mon_conseil_coeur">C\'est mes conseil coeur</string>
+    <string name="this_is_mon_conseil_monitoring_coeur">C\'est mes conseils suivi cardiaque</string>
+    <string name="my_conseil_habit_diet">C\'est mes conseils alimentaire</string>
 </resources>
