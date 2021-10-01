@@ -83,21 +83,14 @@ public class myHeart extends AppCompatActivity {
         }
     }
 
-    public void previousStep(View view) {
-        Log.d("myHeartPreviousStep", "bouton previous step");
-        onBackPressed();
-    }
+    private void GetResponse() {
 
-    public void nextStep(View view) {
-        Log.d("myHeartNextStep", "bouton next step");
-        //Ajouter la vérification du remplissage de toutes les réponses
-
-
-        if ((radioGroupQ1.getCheckedRadioButtonId() == -1)|
-                (radioGroupQ2.getCheckedRadioButtonId() == -1)|
-                (radioGroupQ3.getCheckedRadioButtonId() == -1)|
-                (radioGroupQ4.getCheckedRadioButtonId() == -1)|
-                (spinnerQ6.getSelectedItem().toString().equals(""))) {
+        if ((radioGroupQ1.getCheckedRadioButtonId() == -1) |
+                (radioGroupQ2.getCheckedRadioButtonId() == -1) |
+                (radioGroupQ3.getCheckedRadioButtonId() == -1) |
+                (radioGroupQ4.getCheckedRadioButtonId() == -1) |
+                (spinnerQ6.getSelectedItem().toString().equals("Select your BMI category")) |
+                (spinnerQ6.getSelectedItem().toString().equals("Selectionner votre catégorie IMC"))) {
             Toast.makeText(this, R.string.error_next_step, Toast.LENGTH_LONG).show();
         } else {
             if (radioYesQ1.isChecked()) {
@@ -124,23 +117,33 @@ public class myHeart extends AppCompatActivity {
                 person.setTension(false);
             }
 
-            if(switchQ5.isChecked()){
+            if (switchQ5.isChecked()) {
+                person.setFamillePbCoeur(true);
+            } else {
                 person.setFamillePbCoeur(true);
             }
-            else {
-                person.setFamillePbCoeur(true);
-            }
-
             person.setIMC(spinnerQ6.getSelectedItem().toString());
-
-
-            //ToDo voir si les attributs on recuperer les reponses
-            //ToDo Voir si les attribut spinner son bien traduit
-
-            Intent intentMyHeartMonito;
-            intentMyHeartMonito = new Intent(this, MyHeartMonito.class);
-            intentMyHeartMonito.putExtra("inputpersonne", this.person);
-            startActivity(intentMyHeartMonito);
         }
     }
+
+    public void previousStep(View view) {
+        Log.d("myHeartPreviousStep", "bouton previous step");
+        GetResponse();
+            Intent intentIam;
+            intentIam = new Intent(this, IAm.class);
+            intentIam.putExtra("inputpersonne", this.person);
+            startActivity(intentIam);
+        onBackPressed();
+    }
+
+    public void nextStep(View view) {
+    Log.d("myHeartNextStep", "bouton next step");
+    //Ajouter la vérification du remplissage de toutes les réponses
+        GetResponse();
+        Intent intentMyHeartMonito;
+        intentMyHeartMonito = new Intent(this, MyHeartMonito.class);
+        intentMyHeartMonito.putExtra("inputpersonne", this.person);
+        startActivity(intentMyHeartMonito);
+    }
+
 }
