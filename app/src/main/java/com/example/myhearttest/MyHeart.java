@@ -12,35 +12,46 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class myHeart extends AppCompatActivity {
+public class MyHeart extends AppCompatActivity {
 
+    public static final String TAG = "MyHeart"; // Identifiant pour les messages de log
 
+    // Attributs réponse question 1
     private RadioGroup radioGroupQ1;
     private RadioButton radioYesQ1;
     private RadioButton radioNoQ1;
 
+    // Attributs réponse question 2
     private RadioGroup radioGroupQ2;
     private RadioButton radioYesQ2;
     private RadioButton radioNoQ2;
 
+    // Attributs réponse question 3
     private RadioGroup radioGroupQ3;
     private RadioButton radioYesQ3;
     private RadioButton radioNoQ3;
 
+    // Attributs réponse question 4
     private RadioGroup radioGroupQ4;
     private  RadioButton radioYesQ4;
     private RadioButton radioNoQ4;
 
-    private Switch switchQ5;
-    private Spinner spinnerQ6;
-    private Personne person;
+
+    private Switch switchQ5; // Switch réponse question 5
+    private Spinner spinnerQ6; // Spinner réponse question 5
+    private Personne person; // Objet personne dans lequel sont stockées les informations saisies par l'utilisateur
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Création de l'activité
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_myheart);
+
+        // Création de l'objet personne et récupération des données de l'activité précédente
         person = new Personne();
         processIntentData();
+
+        // Association des attributs de la classe aux widgets de l'activité
         radioGroupQ1 = (RadioGroup) findViewById(R.id.mhRadioGroupQ1);
         radioYesQ1 = (RadioButton) findViewById(R.id.mhYradioButtonQ1);
         radioNoQ1 = (RadioButton) findViewById(R.id.mhNradioButtonQ1);
@@ -59,8 +70,8 @@ public class myHeart extends AppCompatActivity {
 
         switchQ5 = (Switch) findViewById(R.id.mhSwitchQ5);
         spinnerQ6 = (Spinner) findViewById(R.id.mhspinnerQ6);
-        Log.d("spinnerQ6",spinnerQ6.getSelectedItem().toString());
-        Log.d("myHeartOnCreate", "page myHeart");
+
+        Log.d(MyHeart.TAG, "creation activite MyHeart");
     }
 
     // This method (whose name is abritrary) is called by onCreate().
@@ -83,6 +94,9 @@ public class myHeart extends AppCompatActivity {
         }
     }
 
+    /**
+     * Méthode qui permet d'enregistrer les réponses saisies par l'utilisateur dans l'objet personne
+     */
     private void GetResponse() {
 
         if ((radioGroupQ1.getCheckedRadioButtonId() == -1) |
@@ -126,6 +140,10 @@ public class myHeart extends AppCompatActivity {
         }
     }
 
+    /**
+     * Méthode qui permet le retour à l'activité précédente
+     * @param view
+     */
     public void previousStep(View view) {
         Log.d("myHeartPreviousStep", "bouton previous step");
         GetResponse();
@@ -136,6 +154,10 @@ public class myHeart extends AppCompatActivity {
         onBackPressed();
     }
 
+    /**
+     * Méthode qui permet le passage à l'activité suivante
+     * @param view
+     */
     public void nextStep(View view) {
     Log.d("myHeartNextStep", "bouton next step");
     //Ajouter la vérification du remplissage de toutes les réponses
@@ -145,5 +167,4 @@ public class myHeart extends AppCompatActivity {
         intentMyHeartMonito.putExtra("inputpersonne", this.person);
         startActivity(intentMyHeartMonito);
     }
-
 }

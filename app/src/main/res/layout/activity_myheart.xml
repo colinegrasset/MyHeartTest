@@ -64,9 +64,9 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="730dp"
-        android:layout_height="423dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideline2">
@@ -87,8 +87,8 @@
                     android:id="@+id/mhtextViewNumber1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="200dp"
-                    android:layout_marginTop="70dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
                     android:text="@string/_1"
                     android:textColor="#C12222"
                     android:textSize="34sp"
@@ -100,7 +100,7 @@
                     android:id="@+id/mhtextViewNumberQ3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="200dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="30dp"
                     android:text="@string/_3"
                     android:textColor="#C12222"
@@ -154,7 +154,7 @@
                     android:id="@+id/mhtextViewNumberQ2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="200dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="30dp"
                     android:text="@string/_2"
                     android:textColor="#C12222"
@@ -285,7 +285,7 @@
                     android:id="@+id/mhtextViewNumberQ4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="200dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="30dp"
                     android:text="@string/_4"
                     android:textColor="#C12222"
@@ -298,7 +298,7 @@
                     android:id="@+id/mhtextViewNumberQ5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="200dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="140dp"
                     android:text="@string/_5"
                     android:textColor="#C12222"
@@ -311,7 +311,7 @@
                     android:id="@+id/mhtextViewNumberQ6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="200dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="60dp"
                     android:text="@string/_6"
                     android:textColor="#C12222"
@@ -353,22 +353,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp"
                     android:onClick="previousStep"
                     android:text="@string/previous"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhspinnerQ6" />
 
                 <Button
                     android:id="@+id/button4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
                     android:layout_marginEnd="30dp"
                     android:layout_marginBottom="30dp"
                     android:onClick="nextStep"
                     android:text="@string/next"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mhspinnerQ6" />
 
                 <Spinner
                     android:id="@+id/mhspinnerQ6"
@@ -389,33 +393,15 @@
                     android:layout_height="48dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/yes_there_is_someone"
+                    android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion" />
+                    app:layout_constraintTop_toBottomOf="@+id/mhQuestion"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintGuide_percent="0.05109489"
-        app:layout_constraintTop_toBottomOf="@+id/guideline3" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintGuide_percent="-0.049247608"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

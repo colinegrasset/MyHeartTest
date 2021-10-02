@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyHeartTest">
         <activity
-            android:name=".myHabitDiet"
+            android:name=".MyHabitDiet"
             android:exported="true" />
         <activity
             android:name=".TestResult"
@@ -19,7 +19,7 @@
             android:name=".IAm"
             android:exported="true" />
         <activity
-            android:name=".myHeart"
+            android:name=".MyHeart"
             android:exported="true" />
         <activity
             android:name=".MyHeartMonito"

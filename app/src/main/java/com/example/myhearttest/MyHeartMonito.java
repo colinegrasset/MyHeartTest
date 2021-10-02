@@ -88,7 +88,7 @@ public class MyHeartMonito extends AppCompatActivity {
                 person.setCardiologue(false);
             }
             Intent intentMyHeart;
-            intentMyHeart = new Intent(this, myHabitDiet.class);
+            intentMyHeart = new Intent(this, MyHabitDiet.class);
             intentMyHeart.putExtra("inputpersonne", this.person);
             startActivity(intentMyHeart);
         }
