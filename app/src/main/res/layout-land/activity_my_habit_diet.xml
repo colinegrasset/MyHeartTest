@@ -62,12 +62,11 @@
 
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="732dp"
-        android:layout_height="358dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideline2">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -76,7 +75,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="683dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent">
@@ -86,6 +85,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/starchy_foods"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="@+id/checkBoxFruitVege"
                     app:layout_constraintTop_toBottomOf="@+id/checkBoxFruitVege" />
 
@@ -120,13 +120,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="200dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="15dp"
                     android:text="@string/_1"
                     android:textColor="#C12222"
                     android:textSize="34sp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/MHMLayoutBarreHaut" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/MHMtextViewQuestion1"
@@ -149,7 +149,8 @@
                     android:onClick="previousStep"
                     android:text="@string/previous"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ChipGroupQ2" />
 
                 <Button
                     android:id="@+id/MHMbuttonNext"
@@ -160,7 +161,8 @@
                     android:onClick="finishTest"
                     android:text="@string/finish_test"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ChipGroupQ2" />
 
                 <CheckBox
                     android:id="@+id/checkBoxMeat"
@@ -169,14 +171,17 @@
                     android:layout_marginStart="240dp"
                     android:layout_marginTop="20dp"
                     android:text="@string/meat"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion1" />
+                    app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion1"
+                    tools:ignore="TextContrastCheck" />
 
                 <CheckBox
                     android:id="@+id/checkBoxFruitVege"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/fruits_and_or_vegetables"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="@+id/checkBoxMeat"
                     app:layout_constraintTop_toBottomOf="@+id/checkBoxMeat" />
 
@@ -185,14 +190,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/legumes"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="@+id/checkBoxStarchy"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBoxStarchy" />
+                    app:layout_constraintTop_toBottomOf="@+id/checkBoxStarchy"
+                    tools:ignore="TextContrastCheck" />
 
                 <CheckBox
                     android:id="@+id/checkBoxCakesSweet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/cakes_and_or_sweets"
+                    android:textColor="@color/black"
                     app:layout_constraintStart_toStartOf="@+id/checkBoxLegumes"
                     app:layout_constraintTop_toBottomOf="@+id/checkBoxLegumes" />
 

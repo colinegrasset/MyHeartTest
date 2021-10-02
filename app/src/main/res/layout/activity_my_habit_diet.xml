@@ -149,7 +149,8 @@
         android:layout_marginTop="20dp"
         android:text="@string/meat"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion1" />
+        app:layout_constraintTop_toBottomOf="@+id/MHMtextViewQuestion1"
+        tools:ignore="TextContrastCheck" />
 
     <CheckBox
         android:id="@+id/checkBoxFruitVege"

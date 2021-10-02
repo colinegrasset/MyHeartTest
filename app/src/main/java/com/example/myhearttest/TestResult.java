@@ -44,6 +44,8 @@ public class TestResult extends AppCompatActivity {
         url ="https://fedecardio.org/je-me-teste/";
 
         //recuperation des données personnes
+
+        /**
         P1Q1 = person.getAge();
         P1Q2 = person.getGenre();
 
@@ -67,6 +69,7 @@ public class TestResult extends AppCompatActivity {
         P4Q7 = person.getLunch();
         P4Q8 = person.getDiner();
         P4Q9 = person.getSnacking();
+         */
 
         //calcul score page Iam qui va influencer en bonus ou malus sur les autres scores
         //if(P1Q1 == "male"){}
