@@ -7,11 +7,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 public class TestResult extends AppCompatActivity {
 
     private String url;
     private Personne person;
+
+    private TextView genre;
+    private TextView age;
+
     private int P1Q1;
     private Genre P1Q2;
 
@@ -48,6 +53,11 @@ public class TestResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_result);
         url ="https://fedecardio.org/je-me-teste/";
+        person = new Personne();
+        processIntentData();
+
+        genre = findViewById(R.id.textViewGenderInput);
+        age = findViewById(R.id.textViewAgeInput);
 
         //recuperation des données personnes
 
@@ -75,6 +85,7 @@ public class TestResult extends AppCompatActivity {
         P4Q8 = person.getDiner();
         P4Q9 = person.getSnacking();
 
+        afficheResultats();
 
         //calcul score page Iam qui va influencer en bonus ou malus sur les autres scores
         // Plus le score avoisine zéro meilleure est la santé de la personne
@@ -179,6 +190,31 @@ public class TestResult extends AppCompatActivity {
 
         // Détermination de la couleur des 3 fonds des EditText affichage conseil
 
+    }
+
+    // This method (whose name is abritrary) is called by onCreate().
+    private void processIntentData() {
+        Intent intent = getIntent();
+        if(intent != null) {
+            // intent may store different data. To get the one matching the Person class,
+            // we need the key "FromActivity1ToActivity2" which was used for transfer
+            // No need to calls "new()" for allocating memory to transferredPerson
+            Personne transferredPerson = intent.getParcelableExtra("inputpersonne");
+            if (transferredPerson != null) {
+                this.person = transferredPerson;
+                this.person.print();
+            } else {
+                Log.d(MyHabitDiet.TAG, "No Person found after transfer from MyH");
+            }
+        }
+        else {
+            Log.d(MyHabitDiet.TAG, "Error when transferring from MyHeartMonito");
+        }
+    }
+
+    public void afficheResultats(){
+        genre.setText(P1Q2.toString());
+        age.setText(Integer.toString(P1Q1));
     }
 
     public void goToSite(View view) {
