@@ -7,171 +7,463 @@
     android:background="#F6EDED"
     tools:context=".TestResult">
 
-    <LinearLayout
-        android:id="@+id/MHMLayoutBarreHaut"
-        android:layout_width="380dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/MHMtextViewBarreHautIam"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/i_am"
-            android:textAlignment="center"
-            android:textColor="#757575"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/MHMtextViewBarreHautMyHeart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/my_heart"
-            android:textAlignment="center"
-            android:textColor="#CA2626"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/MHMtextViewBarreHautMyHeartMonito"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/my_heart_monitoring"
-            android:textAlignment="center"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/EditTextIAmTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/i_am"
+                    android:textColor="#2B2929"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTestAnswers" />
 
-        <TextView
-            android:id="@+id/textViewMyHabitDiet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/my_habit_diet"
-            android:textAlignment="center"
-            android:textColor="#716D6D"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/editTextMyHeartTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/my_heart"
+                    android:textColor="#2B2929"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewAge" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/editTextMyHeartMonito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/my_heart_monitoring"
+                    android:textColor="#2B2929"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewBMI" />
 
-    <Button
-        android:id="@+id/buttonGoSite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:onClick="goToSite"
-        android:text="@string/go_to_site"
-        app:layout_constraintBottom_toTopOf="@+id/buttonQuit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:id="@+id/editTextMyHabitDietTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/my_habit_diet"
+                    android:textColor="#2B2929"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCardiologist" />
 
-    <Button
-        android:id="@+id/buttonQuit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="@string/quit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+                <Button
+                    android:id="@+id/buttonGoSite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:onClick="goToSite"
+                    android:text="@string/go_to_site"
+                    app:layout_constraintBottom_toTopOf="@+id/buttonQuit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdvice2" />
 
-    <TextView
-        android:id="@+id/TestResultTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="#DCDCDC"
-        android:text="@string/test_results"
-        android:textColor="#C52920"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+                <Button
+                    android:id="@+id/buttonQuit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:onClick="quitTest"
+                    android:text="@string/quit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/myHeartAdvice"
-        android:layout_width="367dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="20dp"
-        android:background="#DCDCDC"
-        android:text="@string/textview"
-        android:textColor="#616161"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myHeartAdviceTitle" />
+                <TextView
+                    android:id="@+id/TestResultTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="#DCDCDC"
+                    android:text="@string/test_results"
+                    android:textColor="#C52920"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDmeals" />
 
-    <TextView
-        android:id="@+id/myHeartMonitoringAdvice"
-        android:layout_width="367dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="20dp"
-        android:background="#DCDCDC"
-        android:text="@string/textview"
-        android:textColor="#616161"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdviceTitle" />
+                <TextView
+                    android:id="@+id/myHeartAdvice"
+                    android:layout_width="367dp"
+                    android:layout_height="101dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#DCDCDC"
+                    android:text="@string/textview"
+                    android:textColor="#616161"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/myHeartAdviceTitle" />
 
-    <TextView
-        android:id="@+id/myHeartMonitoringAdvice2"
-        android:layout_width="367dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="20dp"
-        android:background="#DCDCDC"
-        android:text="@string/textview"
-        android:textColor="#616161"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myHabitDietAdviceTitle" />
+                <TextView
+                    android:id="@+id/myHeartMonitoringAdvice"
+                    android:layout_width="367dp"
+                    android:layout_height="101dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#DCDCDC"
+                    android:text="@string/textview"
+                    android:textColor="#616161"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdviceTitle" />
 
-    <TextView
-        android:id="@+id/myHeartAdviceTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/my_heart_advice"
-        android:textColor="#2B2929"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TestResultTitle" />
+                <TextView
+                    android:id="@+id/myHeartMonitoringAdvice2"
+                    android:layout_width="367dp"
+                    android:layout_height="101dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#DCDCDC"
+                    android:text="@string/textview"
+                    android:textColor="#616161"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/myHabitDietAdviceTitle" />
 
-    <TextView
-        android:id="@+id/myHeartMonitoringAdviceTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/my_heart_monitoring_advice_advice"
-        android:textColor="#2B2929"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myHeartAdvice" />
+                <TextView
+                    android:id="@+id/myHeartAdviceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/my_heart_advice"
+                    android:textColor="#2B2929"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TestResultTitle" />
 
-    <TextView
-        android:id="@+id/myHabitDietAdviceTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/my_heart_monitoring_advice_advice"
-        android:textColor="#2B2929"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdvice" />
+                <TextView
+                    android:id="@+id/myHeartMonitoringAdviceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/my_heart_monitoring_advice_advice"
+                    android:textColor="#2B2929"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/myHeartAdvice" />
+
+                <TextView
+                    android:id="@+id/myHabitDietAdviceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/my_heart_monitoring_advice_advice"
+                    android:textColor="#2B2929"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdvice" />
+
+                <TextView
+                    android:id="@+id/textViewTestAnswers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/test_answers"
+                    android:textColor="#C52920"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/gender"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/EditTextIAmTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/EditTextIAmTitle" />
+
+                <TextView
+                    android:id="@+id/textViewAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/age"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textViewGender"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewGender" />
+
+                <TextView
+                    android:id="@+id/textViewHeartPb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/heart_problems"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/editTextMyHeartTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextMyHeartTitle" />
+
+                <TextView
+                    android:id="@+id/textViewCholPb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/cholesterol_problems"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textViewHeartPb"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewHeartPb" />
+
+                <TextView
+                    android:id="@+id/textViewDiabetic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/diabetic"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textViewCholPb"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCholPb" />
+
+                <TextView
+                    android:id="@+id/textViewHBPressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/high_blood_pressure"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textViewDiabetic"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDiabetic" />
+
+                <TextView
+                    android:id="@+id/textViewRelativeHPb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/relative_with_heart_problems"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textViewHBPressure"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewHBPressure" />
+
+                <TextView
+                    android:id="@+id/textViewBMI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/body_mass_index"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textViewRelativeHPb"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRelativeHPb" />
+
+                <TextView
+                    android:id="@+id/textViewCardioRisk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/cardiovascular_risk_with_doctor"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/editTextMyHeartMonito"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextMyHeartMonito" />
+
+                <TextView
+                    android:id="@+id/textViewHeartCheckUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/heart_check_up"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textViewCardioRisk"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCardioRisk" />
+
+                <TextView
+                    android:id="@+id/textViewCardiologist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/cardiologist"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textViewHeartCheckUp"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewHeartCheckUp" />
+
+                <TextView
+                    android:id="@+id/textViewDfood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/daily_food"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/editTextMyHabitDietTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextMyHabitDietTitle" />
+
+                <TextView
+                    android:id="@+id/textViewDmeals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/daily_meals"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textViewDfood"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDfood" />
+
+                <TextView
+                    android:id="@+id/textViewGenderInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewGender"
+                    app:layout_constraintStart_toEndOf="@+id/textViewGender" />
+
+                <TextView
+                    android:id="@+id/textViewAgeInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewAge"
+                    app:layout_constraintStart_toEndOf="@+id/textViewAge" />
+
+                <TextView
+                    android:id="@+id/textViewHeartPbInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewHeartPb"
+                    app:layout_constraintStart_toEndOf="@+id/textViewHeartPb" />
+
+                <TextView
+                    android:id="@+id/textViewCholPbInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewCholPb"
+                    app:layout_constraintStart_toEndOf="@+id/textViewCholPb" />
+
+                <TextView
+                    android:id="@+id/textViewDiabeticInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDiabetic"
+                    app:layout_constraintStart_toEndOf="@+id/textViewDiabetic" />
+
+                <TextView
+                    android:id="@+id/textViewHBpressureInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewHBPressure"
+                    app:layout_constraintStart_toEndOf="@+id/textViewHBPressure" />
+
+                <TextView
+                    android:id="@+id/textViewRelativeHPbInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewRelativeHPb"
+                    app:layout_constraintStart_toEndOf="@+id/textViewRelativeHPb" />
+
+                <TextView
+                    android:id="@+id/textViewBMIInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewBMI"
+                    app:layout_constraintStart_toEndOf="@+id/textViewBMI" />
+
+                <TextView
+                    android:id="@+id/textViewCardioRiskInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewCardioRisk"
+                    app:layout_constraintStart_toEndOf="@+id/textViewCardioRisk" />
+
+                <TextView
+                    android:id="@+id/textViewHeartCheckUpInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewHeartCheckUp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewHeartCheckUp" />
+
+                <TextView
+                    android:id="@+id/textViewCardiologistInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewCardiologist"
+                    app:layout_constraintStart_toEndOf="@+id/textViewCardiologist" />
+
+                <TextView
+                    android:id="@+id/textViewDfoodInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDfood"
+                    app:layout_constraintStart_toEndOf="@+id/textViewDfood" />
+
+                <TextView
+                    android:id="@+id/textViewDmealsInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/defaulttext"
+                    android:textColor="#616161"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDmeals"
+                    app:layout_constraintStart_toEndOf="@+id/textViewDmeals" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

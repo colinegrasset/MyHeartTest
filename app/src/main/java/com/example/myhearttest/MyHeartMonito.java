@@ -54,10 +54,10 @@ public class MyHeartMonito extends AppCompatActivity {
                 this.person = transferredPerson;
                 this.person.print();
             } else {
-                Log.d(MyHeartMonito.TAG, "No Person found after transfer from MainActivity");
+                Log.d(MyHeartMonito.TAG, "No Person found after transfer from MyHeart");
             }
         } else {
-            Log.d(MyHeartMonito.TAG, "Error when transferring from MainActivity");
+            Log.d(MyHeartMonito.TAG, "Error when transferring from MyHeart");
         }
     }
 
@@ -88,7 +88,7 @@ public class MyHeartMonito extends AppCompatActivity {
                 person.setCardiologue(false);
             }
             Intent intentMyHeart;
-            intentMyHeart = new Intent(this, myHabitDiet.class);
+            intentMyHeart = new Intent(this, MyHabitDiet.class);
             intentMyHeart.putExtra("inputpersonne", this.person);
             startActivity(intentMyHeart);
         }

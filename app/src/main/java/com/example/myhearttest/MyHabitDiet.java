@@ -12,7 +12,7 @@ import android.widget.Toast;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 
-public class myHabitDiet extends AppCompatActivity {
+public class MyHabitDiet extends AppCompatActivity {
 
     public static final String TAG = "myHabitDiet";
 
@@ -59,11 +59,11 @@ public class myHabitDiet extends AppCompatActivity {
                 this.person = transferredPerson;
                 this.person.print();
             } else {
-                Log.d(myHabitDiet.TAG, "No Person found after transfer from MainActivity");
+                Log.d(MyHabitDiet.TAG, "No Person found after transfer from MyHeartMonito");
             }
         }
         else {
-            Log.d(myHabitDiet.TAG, "Error when transferring from MainActivity");
+            Log.d(MyHabitDiet.TAG, "Error when transferring from MyHeartMonito");
         }
     }
 

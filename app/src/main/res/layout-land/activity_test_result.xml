@@ -8,64 +8,10 @@
     android:background="#F6EDED"
     tools:context=".TestResult">
 
-    <LinearLayout
-        android:id="@+id/MHMLayoutBarreHaut"
-        android:layout_width="380dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/MHMtextViewBarreHautIam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/i_am"
-            android:textAlignment="center"
-            android:textColor="#757575"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/MHMtextViewBarreHautMyHeart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/my_heart"
-            android:textAlignment="center"
-            android:textColor="#CA2626"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/MHMtextViewBarreHautMyHeartMonito"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/my_heart_monitoring"
-            android:textAlignment="center"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textViewMyHabitDiet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/my_habit_diet"
-            android:textAlignment="center"
-            android:textColor="#716D6D"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="732dp"
-        android:layout_height="388dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +24,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent">
@@ -87,7 +33,7 @@
                     android:id="@+id/buttonGoSite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="20dp"
                     android:onClick="goToSite"
                     android:text="@string/go_to_site"
@@ -110,7 +56,7 @@
                     android:id="@+id/TestResultTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="80dp"
+                    android:layout_marginTop="40dp"
                     android:background="#DCDCDC"
                     android:text="@string/test_results"
                     android:textColor="#C52920"

@@ -50,6 +50,8 @@ public class TestResult extends AppCompatActivity {
         url ="https://fedecardio.org/je-me-teste/";
 
         //recuperation des données personnes
+
+        /**
         P1Q1 = person.getAge();
         P1Q2 = person.getGenre();
 
@@ -73,6 +75,7 @@ public class TestResult extends AppCompatActivity {
         P4Q7 = person.getLunch();
         P4Q8 = person.getDiner();
         P4Q9 = person.getSnacking();
+         */
 
         //calcul score page Iam qui va influencer en bonus ou malus sur les autres scores
         // Plus le score avoisine zéro meilleure est la santé de la personne
@@ -183,6 +186,10 @@ public class TestResult extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
         startActivity(intent);
+    }
+
+    public void quitTest(View view) {
+        finishAffinity();
     }
 
     //ToDo Calculer les scores des 3 activités
