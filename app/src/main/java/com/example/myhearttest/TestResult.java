@@ -9,12 +9,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -112,31 +115,77 @@ public class TestResult extends AppCompatActivity {
         dMeals = findViewById(R.id.textViewDmealsInput);
 
 
+        // Création de l'objet personne et récupération des données de l'activité précédente
+        person = new Personne();
+        processIntentData();
+
+        //calcul des scores
+        ArrayList ListScoreActi = CalculScore();
+        // Détermination de la couleur des 3 fonds des EditText affichage conseil
+                // couleur verte: #7CD181
+                // couleur rouge: #DF6F6F*
+        Log.d("List score acti:",ListScoreActi.toString());
+        int Score1= (int) ListScoreActi.get(0);
+        Log.d("List score acti1:",ListScoreActi.get(0).toString());
+        int Score2= (int) ListScoreActi.get(1);
+        Log.d("List score acti2:",ListScoreActi.get(1).toString());
+        int Score3= (int) ListScoreActi.get(2);
+        Log.d("List score acti3:",ListScoreActi.get(2).toString());
+
+        String Color1;
+        String Color2;
+        String Color3;
+
+        if(Score1 >= 2){
+            Color1 = "#DF6F6F*";
+        }else {
+            Color1 = "#7CD181";
+        }
+        if(Score2>=2){
+            Color2 = "#DF6F6F*";
+        }else {
+            Color2 = "#7CD181";
+        }
+        if(Score3>=2){
+            Color3 = "#DF6F6F*";
+        }else {
+            Color3 = "#7CD181";
+        }
+        modifColor(Color1,Color2,Color3);
+
+    }
+
+    public ArrayList CalculScore(){
+
+        int BonusMalus;
+        int ScoreActi1;
+        int ScoreActi2;
+        int ScoreActi3;
         //recuperation des données personnes
 
-        P1Q1 = person.getAge();
-        P1Q2 = person.getGenre();
+        int P1Q1 = person.getAge();
+        Genre P1Q2 = person.getGenre();
 
-        P2Q1 = person.getCoeur();
-        P2Q2 = person.getCholesterol();
-        P2Q3 = person.getDiabetique();
-        P2Q4 = person.getTension();
-        P2Q5 = person.getFamillePbCoeur();
-        P2Q6 = person.getIMC();
+        boolean P2Q1 = person.getCoeur();
+        boolean P2Q2 = person.getCholesterol();
+        boolean P2Q3 = person.getDiabetique();
+        boolean P2Q4 = person.getTension();
+        boolean P2Q5 = person.getFamillePbCoeur();
+        String P2Q6 = person.getIMC();
 
-        P3Q1 = person.getRiskCardio();
-        P3Q2 = person.getCoeurTest();
-        P3Q3 = person.getCardiologue();
+        boolean P3Q1 = person.getRiskCardio();
+        boolean P3Q2 = person.getCoeurTest();
+        boolean P3Q3 = person.getCardiologue();
 
-        P4Q1 = person.getCakeSweet();
-        P4Q2 = person.getMeat();
-        P4Q3 = person.getFruitsVege();
-        P4Q4 = person.getStarchy();
-        P4Q5 = person.getLegumes();
-        P4Q6 = person.getBreakfast();
-        P4Q7 = person.getLunch();
-        P4Q8 = person.getDiner();
-        P4Q9 = person.getSnacking();
+        boolean P4Q1 = person.getCakeSweet();
+        boolean P4Q2 = person.getMeat();
+        boolean P4Q3 = person.getFruitsVege();
+        boolean P4Q4 = person.getStarchy();
+        boolean P4Q5 = person.getLegumes();
+        boolean P4Q6 = person.getBreakfast();
+        boolean P4Q7 = person.getLunch();
+        boolean P4Q8 = person.getDiner();
+        boolean P4Q9 = person.getSnacking();
 
         afficheResultats();
 
@@ -241,7 +290,16 @@ public class TestResult extends AppCompatActivity {
         ScoreActi3 = ScoreActi3 + BonusMalus;
         Log.d("Score de l'acti myHabitDiet:",String.valueOf(ScoreActi3));
 
-        // Détermination de la couleur des 3 fonds des EditText affichage conseil
+        ArrayList<Object> ListScore = new ArrayList<>();
+        ListScore.add(ScoreActi1);
+        ListScore.add(ScoreActi2);
+        ListScore.add(ScoreActi3);
+
+        Log.d("Liste des scores",ListScore.toString());
+        return(ListScore);
+    }
+
+    public void modifColor(String Color1, String Color2, String Color3){
 
                 // les id des textview que je dois modifier:
                 // myHeartAdvice
@@ -268,74 +326,68 @@ public class TestResult extends AppCompatActivity {
         }
 
         /**
+        // les id des textview que je dois modifier:
+        // myHeartAdvice
+        //myHeartMonitoringAdvice
+        //myHabitDietAdvice2
+        // c'est ce parametre que je dois changer :   android:background="#DCDCDC"
         // je charge mon fichier activité testresult
         try {
-            File data = new File(TestResult);
+
             DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
             DocumentBuilder b = f.newDocumentBuilder();
-            Document doc = ((DocumentBuilder) b).parse(new File(TestResult));
-        }
-        catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        }
+            Document doc = b.parse(new File(TestResult));
 
-        //Je modifie les couleurs de mon fichier
-        xPath = XPathFactory.newInstance().newXPath();
-        Node BackGroundColor1 = null;
-        Node BackGroundColor2 = null;
-        Node BackGroundColor3 = null;
-        try {
+
+            //Je modifie les couleurs de mon fichier
+            XPath xPath = XPathFactory.newInstance().newXPath();
+            Node BackGroundColor1;
+            Node BackGroundColor2;
+            Node BackGroundColor3;
+
+
             BackGroundColor1 =
                     (Node) xPath.compile("/ScrollView/LinearLayout/" +
                             "androidx.constraintlayout.widget.ConstraintLayout/" +
-                            "@+id/myHeartAdvice/background").evaluate(
-                                    TestResult, XPathConstants.NODE);
+                            "@+id/myHeartAdvice/background").evaluate(doc, XPathConstants.NODE);
 
             BackGroundColor2 =
                     (Node) xPath.compile("/ScrollView/LinearLayout/" +
                             "androidx.constraintlayout.widget.ConstraintLayout/" +
                             "@+id/myHeartMonitoringAdvice/background").evaluate(
-                            TestResult, XPathConstants.NODE);
+                            doc, XPathConstants.NODE);
 
             BackGroundColor3 =
                     (Node) xPath.compile("/ScrollView/LinearLayout/" +
                             "androidx.constraintlayout.widget.ConstraintLayout/" +
                             "@+id/myHabitDietAdvice2/background").evaluate(
-                            TestResult, XPathConstants.NODE);
-        } catch (XPathExpressionException e) {
-            e.printStackTrace();
-        }
-        BackGroundColor1.setTextContent(Color1);
-        BackGroundColor2.setTextContent(Color2);
-        BackGroundColor3.setTextContent(Color3);
+                            doc, XPathConstants.NODE);
 
-        // Appliquer les changement dans le fichier test result
-        Transformer tf = null;
-        try {
+            BackGroundColor1.setTextContent(Color1);
+            BackGroundColor2.setTextContent(Color2);
+            BackGroundColor3.setTextContent(Color3);
+
+            // Appliquer les changements dans le fichier test result
+            Transformer tf;
+
             tf = TransformerFactory.newInstance().newTransformer();
-        } catch (TransformerConfigurationException e) {
-            e.printStackTrace();
-        }
-        tf.setOutputProperty(OutputKeys.INDENT, "yes");
-        tf.setOutputProperty(OutputKeys.METHOD, "xml");
-        tf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
 
-        DOMSource domSource1 = new DOMSource(BackGroundColor1);
-        DOMSource domSource2 = new DOMSource(BackGroundColor2);
-        DOMSource domSource3 = new DOMSource(BackGroundColor3);
-        StreamResult sr = new StreamResult(new File(TestResult));
-        try {
+            tf.setOutputProperty(OutputKeys.INDENT, "yes");
+            tf.setOutputProperty(OutputKeys.METHOD, "xml");
+            tf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+            DOMSource domSource1 = new DOMSource(BackGroundColor1);
+            DOMSource domSource2 = new DOMSource(BackGroundColor2);
+            DOMSource domSource3 = new DOMSource(BackGroundColor3);
+            StreamResult sr = new StreamResult(new File(TestResult));
+
             tf.transform(domSource1, sr);
             tf.transform(domSource2, sr);
             tf.transform(domSource3, sr);
-        } catch (TransformerException e) {
+        } catch (TransformerException | ParserConfigurationException | IOException | XPathExpressionException | SAXException e) {
             e.printStackTrace();
         }
-        */
+
     }
 
     // This method (whose name is abritrary) is called by onCreate().
