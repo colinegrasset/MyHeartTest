@@ -68,4 +68,18 @@
     <string name="this_is_mon_conseil_coeur">C\'est mes conseil coeur</string>
     <string name="this_is_mon_conseil_monitoring_coeur">C\'est mes conseils suivi cardiaque</string>
     <string name="my_conseil_habit_diet">C\'est mes conseils alimentaire</string>
+    <string name="test_answers">Réponses au test</string>
+    <string name="gender">Genre :</string>
+    <string name="defaulttext">TextParDefault</string>
+    <string name="heart_problems">Problèmes cardiaques :</string>
+    <string name="daily_meals">Repas quotidiens :</string>
+    <string name="daily_food">Alimentation quotidienne :</string>
+    <string name="heart_check_up">Bilan cardiaque :</string>
+    <string name="cardiovascular_risk_with_doctor">Risque cardiovasculaire vu avec un médecin :</string>
+    <string name="relative_with_heart_problems">Proche avec problèmes cardiaques :</string>
+    <string name="cholesterol_problems">Problèmes de cholesterol :</string>
+    <string name="diabetic">Diabète :</string>
+    <string name="cardiologist">Cardiologue :</string>
+    <string name="high_blood_pressure">Hypertension :</string>
+    <string name="body_mass_index">Indice de masse corporelle :</string>
 </resources>
