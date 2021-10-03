@@ -59,11 +59,11 @@ public class MyHabitDiet extends AppCompatActivity {
                 this.person = transferredPerson;
                 this.person.print();
             } else {
-                Log.d(MyHabitDiet.TAG, "No Person found after transfer from MainActivity");
+                Log.d(MyHabitDiet.TAG, "No Person found after transfer from MyHeartMonito");
             }
         }
         else {
-            Log.d(MyHabitDiet.TAG, "Error when transferring from MainActivity");
+            Log.d(MyHabitDiet.TAG, "Error when transferring from MyHeartMonito");
         }
     }
 

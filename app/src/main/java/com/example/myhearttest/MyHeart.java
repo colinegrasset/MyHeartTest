@@ -86,11 +86,11 @@ public class MyHeart extends AppCompatActivity {
                 this.person = transferredPerson;
                 this.person.print();
             } else {
-                Log.d(IAm.TAG, "No Person found after transfer from MainActivity");
+                Log.d(IAm.TAG, "No Person found after transfer from IAm");
             }
         }
         else {
-            Log.d(IAm.TAG, "Error when transferring from MainActivity");
+            Log.d(IAm.TAG, "Error when transferring from IAm");
         }
     }
 

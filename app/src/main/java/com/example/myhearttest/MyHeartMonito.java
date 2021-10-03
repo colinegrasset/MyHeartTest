@@ -54,10 +54,10 @@ public class MyHeartMonito extends AppCompatActivity {
                 this.person = transferredPerson;
                 this.person.print();
             } else {
-                Log.d(MyHeartMonito.TAG, "No Person found after transfer from MainActivity");
+                Log.d(MyHeartMonito.TAG, "No Person found after transfer from MyHeart");
             }
         } else {
-            Log.d(MyHeartMonito.TAG, "Error when transferring from MainActivity");
+            Log.d(MyHeartMonito.TAG, "Error when transferring from MyHeart");
         }
     }
 
