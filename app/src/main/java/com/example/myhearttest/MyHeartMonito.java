@@ -35,10 +35,10 @@ public class MyHeartMonito extends AppCompatActivity {
         radioGroupQ3 = findViewById(R.id.MHMRadioGroupQ3);
         buttonQ1Yes = findViewById(R.id.MHMradioButtonQ1Yes);
         buttonQ1No = findViewById(R.id.MHMradioButtonQ1No);
-        buttonQ2Yes = findViewById(R.id.MHMradioButtonQ1Yes);
-        buttonQ2No = findViewById(R.id.MHMradioButtonQ1No);
-        buttonQ3Yes = findViewById(R.id.MHMradioButtonQ1Yes);
-        buttonQ3No = findViewById(R.id.MHMradioButtonQ1No);
+        buttonQ2Yes = findViewById(R.id.MHMradioButtonQ2Yes);
+        buttonQ2No = findViewById(R.id.MHMradioButtonQ2No);
+        buttonQ3Yes = findViewById(R.id.MHMradioButtonQ3Yes);
+        buttonQ3No = findViewById(R.id.MHMradioButtonQ3No);
         Log.d("myHeartOnCreate", "page myHeartMonito");
     }
 

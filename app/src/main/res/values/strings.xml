@@ -85,4 +85,6 @@
     <string name="cardiologist">Cardiologist :</string>
     <string name="high_blood_pressure">High blood pressure :</string>
     <string name="body_mass_index">Body mass index :</string>
+    <string name="number_of_different_daily_foods">Number of different daily foods :</string>
+    <string name="number_of_daily_meals">Number of daily meals :</string>
 </resources>

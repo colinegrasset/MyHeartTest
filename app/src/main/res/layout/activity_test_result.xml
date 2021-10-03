@@ -329,7 +329,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
-                    android:text="@string/daily_food"
+                    android:text="@string/number_of_different_daily_foods"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/editTextMyHabitDietTitle"
                     app:layout_constraintTop_toBottomOf="@+id/editTextMyHabitDietTitle" />
@@ -339,7 +339,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="@string/daily_meals"
+                    android:text="@string/number_of_daily_meals"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="@+id/textViewDfood"
                     app:layout_constraintTop_toBottomOf="@+id/textViewDfood" />

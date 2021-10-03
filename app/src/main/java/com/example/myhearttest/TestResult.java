@@ -38,6 +38,18 @@ public class TestResult extends AppCompatActivity {
 
     private TextView genre;
     private TextView age;
+    private TextView heartPB;
+    private TextView cholPB;
+    private TextView diabetic;
+    private TextView hBpressure;
+    private TextView relativeHPb;
+    private TextView BMI;
+    private TextView cardioRisk;
+    private TextView heartCheckUp;
+    private TextView cardiologist;
+    private TextView dFood;
+    private TextView dMeals;
+
 
     private int P1Q1;
     private Genre P1Q2;
@@ -87,6 +99,18 @@ public class TestResult extends AppCompatActivity {
 
         genre = findViewById(R.id.textViewGenderInput);
         age = findViewById(R.id.textViewAgeInput);
+        heartPB = findViewById(R.id.textViewHeartPbInput);
+        cholPB = findViewById(R.id.textViewCholPbInput);
+        diabetic = findViewById(R.id.textViewDiabeticInput);
+        hBpressure = findViewById(R.id.textViewHBpressureInput);
+        relativeHPb = findViewById(R.id.textViewRelativeHPbInput);
+        BMI = findViewById(R.id.textViewBMIInput);
+        cardioRisk = findViewById(R.id.textViewCardioRiskInput);
+        heartCheckUp = findViewById(R.id.textViewHeartCheckUpInput);
+        cardiologist = findViewById(R.id.textViewCardiologistInput);
+        dFood = findViewById(R.id.textViewDfoodInput);
+        dMeals = findViewById(R.id.textViewDmealsInput);
+
 
         //recuperation des données personnes
 
@@ -243,6 +267,7 @@ public class TestResult extends AppCompatActivity {
             Color3 = "#7CD181";
         }
 
+        /**
         // je charge mon fichier activité testresult
         try {
             File data = new File(TestResult);
@@ -310,7 +335,7 @@ public class TestResult extends AppCompatActivity {
         } catch (TransformerException e) {
             e.printStackTrace();
         }
-
+        */
     }
 
     // This method (whose name is abritrary) is called by onCreate().
@@ -336,6 +361,65 @@ public class TestResult extends AppCompatActivity {
     public void afficheResultats(){
         genre.setText(P1Q2.toString());
         age.setText(Integer.toString(P1Q1));
+
+        if (P2Q1){
+            heartPB.setText(R.string.yes);
+        }else{
+            heartPB.setText(R.string.no);
+        }
+        if (P2Q2){
+            cholPB.setText(R.string.yes);
+        }else{
+            cholPB.setText(R.string.no);
+        }
+        if (P2Q3){
+            diabetic.setText(R.string.yes);
+        }else{
+            diabetic.setText(R.string.no);
+        }
+        if (P2Q4){
+            hBpressure.setText(R.string.yes);
+        }else{
+            hBpressure.setText(R.string.no);
+        }
+        if (P2Q5){
+            relativeHPb.setText(R.string.yes);
+        }else{
+            relativeHPb.setText(R.string.no);
+        }
+
+        BMI.setText(P2Q6);
+
+        if (P3Q1){
+            cardioRisk.setText(R.string.yes);
+        }else{
+            cardioRisk.setText(R.string.no);
+        }
+        if (P3Q2){
+            heartCheckUp.setText(R.string.yes);
+        }else{
+            heartCheckUp.setText(R.string.no);
+        }
+        if (P3Q3){
+            cardiologist.setText(R.string.yes);
+        }else{
+            cardiologist.setText(R.string.no);
+        }
+
+        int nbFoods = 0;
+        if (P4Q1){ nbFoods+=1; }
+        if (P4Q2){ nbFoods+=1; }
+        if (P4Q3){ nbFoods+=1; }
+        if (P4Q4){ nbFoods+=1; }
+        if (P4Q5){ nbFoods+=1; }
+        dFood.setText(Integer.toString(nbFoods));
+
+        int nbMeals = 0;
+        if (P4Q6){ nbMeals+=1; }
+        if (P4Q7){ nbMeals+=1; }
+        if (P4Q8){ nbMeals+=1; }
+        if (P4Q9){ nbMeals+=1; }
+        dMeals.setText(Integer.toString(nbMeals));
     }
 
     public void goToSite(View view) {
