@@ -88,6 +88,10 @@ public class TestResult extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void quitTest(View view) {
+        finishAffinity();
+    }
+
     //ToDo Calculer les scores des 3 activités
     //ToDo en fonction du score mettre couleur spécifique a la zone texte
     //ToDo insérer le bon texte et modifier couleur au textView des 3 conseils.
