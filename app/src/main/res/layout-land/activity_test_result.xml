@@ -40,7 +40,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/buttonQuit"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdvice2" />
+                    app:layout_constraintTop_toBottomOf="@+id/myHabitDietAdvice2" />
 
                 <Button
                     android:id="@+id/buttonQuit"
@@ -85,7 +85,7 @@
                     android:layout_width="367dp"
                     android:layout_height="101dp"
                     android:layout_marginTop="20dp"
-                    android:background="#DCDCDC"
+                    android:background="#7CD181"
                     android:text="@string/this_is_mon_conseil_monitoring_coeur"
                     android:textColor="#616161"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -94,7 +94,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdviceTitle" />
 
                 <TextView
-                    android:id="@+id/myHeartMonitoringAdvice2"
+                    android:id="@+id/myHabitDietAdvice2"
                     android:layout_width="367dp"
                     android:layout_height="101dp"
                     android:layout_marginTop="20dp"
