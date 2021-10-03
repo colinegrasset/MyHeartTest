@@ -9,6 +9,28 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+
 public class TestResult extends AppCompatActivity {
 
     private String url;
@@ -46,6 +68,13 @@ public class TestResult extends AppCompatActivity {
     private int ScoreActi2;
     private int ScoreActi3;
 
+    private String Color1;
+    private String Color2;
+    private String Color3;
+
+    private static final String TestResult = "src/main/res/layout/activity_test_result.xml";
+    private static final String TestResultLand = "src/main/res/layout-land/activity_test_result.xml";
+    private XPath xPath;
 
 
     @Override
@@ -132,7 +161,7 @@ public class TestResult extends AppCompatActivity {
         if(P2Q5){
             ScoreActi1 = ScoreActi1 + 1;
         }
-        if(P2Q6.toString().equals("Poids_normal")){
+        if(P2Q6.equals("Poids_normal")){
             ScoreActi1 = ScoreActi1 - 1;
         }
         ScoreActi1 = ScoreActi1 + BonusMalus;
@@ -189,6 +218,98 @@ public class TestResult extends AppCompatActivity {
         Log.d("Score de l'acti myHabitDiet:",String.valueOf(ScoreActi3));
 
         // Détermination de la couleur des 3 fonds des EditText affichage conseil
+
+                // les id des textview que je dois modifier:
+                // myHeartAdvice
+                //myHeartMonitoringAdvice
+                //myHabitDietAdvice2
+                // c'est ce parametre que je dois changer :   android:background="#DCDCDC"
+                // couleur verte: #7CD181
+                // couleur rouge: #DF6F6F*
+
+        if(ScoreActi1>=2){
+            Color1 = "#DF6F6F*";
+        }else {
+            Color1 = "#7CD181";
+        }
+        if(ScoreActi2>=2){
+            Color2 = "#DF6F6F*";
+        }else {
+            Color2 = "#7CD181";
+        }
+        if(ScoreActi3>=2){
+            Color3 = "#DF6F6F*";
+        }else {
+            Color3 = "#7CD181";
+        }
+
+        // je charge mon fichier activité testresult
+        try {
+            File data = new File(TestResult);
+            DocumentBuilderFactory f = DocumentBuilderFactory.newInstance();
+            DocumentBuilder b = f.newDocumentBuilder();
+            Document doc = ((DocumentBuilder) b).parse(new File(TestResult));
+        }
+        catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        }
+
+        //Je modifie les couleurs de mon fichier
+        xPath = XPathFactory.newInstance().newXPath();
+        Node BackGroundColor1 = null;
+        Node BackGroundColor2 = null;
+        Node BackGroundColor3 = null;
+        try {
+            BackGroundColor1 =
+                    (Node) xPath.compile("/ScrollView/LinearLayout/" +
+                            "androidx.constraintlayout.widget.ConstraintLayout/" +
+                            "@+id/myHeartAdvice/background").evaluate(
+                                    TestResult, XPathConstants.NODE);
+
+            BackGroundColor2 =
+                    (Node) xPath.compile("/ScrollView/LinearLayout/" +
+                            "androidx.constraintlayout.widget.ConstraintLayout/" +
+                            "@+id/myHeartMonitoringAdvice/background").evaluate(
+                            TestResult, XPathConstants.NODE);
+
+            BackGroundColor3 =
+                    (Node) xPath.compile("/ScrollView/LinearLayout/" +
+                            "androidx.constraintlayout.widget.ConstraintLayout/" +
+                            "@+id/myHabitDietAdvice2/background").evaluate(
+                            TestResult, XPathConstants.NODE);
+        } catch (XPathExpressionException e) {
+            e.printStackTrace();
+        }
+        BackGroundColor1.setTextContent(Color1);
+        BackGroundColor2.setTextContent(Color2);
+        BackGroundColor3.setTextContent(Color3);
+
+        // Appliquer les changement dans le fichier test result
+        Transformer tf = null;
+        try {
+            tf = TransformerFactory.newInstance().newTransformer();
+        } catch (TransformerConfigurationException e) {
+            e.printStackTrace();
+        }
+        tf.setOutputProperty(OutputKeys.INDENT, "yes");
+        tf.setOutputProperty(OutputKeys.METHOD, "xml");
+        tf.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");
+
+        DOMSource domSource1 = new DOMSource(BackGroundColor1);
+        DOMSource domSource2 = new DOMSource(BackGroundColor2);
+        DOMSource domSource3 = new DOMSource(BackGroundColor3);
+        StreamResult sr = new StreamResult(new File(TestResult));
+        try {
+            tf.transform(domSource1, sr);
+            tf.transform(domSource2, sr);
+            tf.transform(domSource3, sr);
+        } catch (TransformerException e) {
+            e.printStackTrace();
+        }
 
     }
 

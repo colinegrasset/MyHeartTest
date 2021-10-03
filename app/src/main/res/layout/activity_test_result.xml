@@ -29,6 +29,19 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
+                    android:id="@+id/myHabitDietAdviceTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/my_habit_diet"
+                    android:textColor="#2B2929"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdvice" />
+
+                <TextView
                     android:id="@+id/EditTextIAmTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -91,7 +104,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/buttonQuit"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdvice2" />
+                    app:layout_constraintTop_toBottomOf="@+id/myHabitDietAdvice2" />
 
                 <Button
                     android:id="@+id/buttonQuit"
@@ -146,7 +159,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdviceTitle" />
 
                 <TextView
-                    android:id="@+id/myHeartMonitoringAdvice2"
+                    android:id="@+id/myHabitDietAdvice2"
                     android:layout_width="367dp"
                     android:layout_height="101dp"
                     android:layout_marginTop="20dp"
@@ -156,7 +169,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/myHabitDietAdviceTitle" />
+                    app:layout_constraintTop_toBottomOf="@+id/myHabitDietAdviceTitle2" />
 
                 <TextView
                     android:id="@+id/myHeartAdviceTitle"
@@ -183,19 +196,6 @@
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/myHeartAdvice" />
-
-                <TextView
-                    android:id="@+id/myHabitDietAdviceTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="22dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/my_heart_monitoring_advice_advice"
-                    android:textColor="#2B2929"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/myHeartMonitoringAdvice" />
 
                 <TextView
                     android:id="@+id/textViewTestAnswers"
