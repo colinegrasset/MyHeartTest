@@ -114,10 +114,7 @@ public class TestResult extends AppCompatActivity {
         dFood = findViewById(R.id.textViewDfoodInput);
         dMeals = findViewById(R.id.textViewDmealsInput);
 
-
-        // Création de l'objet personne et récupération des données de l'activité précédente
-        person = new Personne();
-        processIntentData();
+        afficheResultats();
 
         //calcul des scores
         ArrayList ListScoreActi = CalculScore();
@@ -187,7 +184,7 @@ public class TestResult extends AppCompatActivity {
         boolean P4Q8 = person.getDiner();
         boolean P4Q9 = person.getSnacking();
 
-        afficheResultats();
+
 
         //calcul score page Iam qui va influencer en bonus ou malus sur les autres scores
         // Plus le score avoisine zéro meilleure est la santé de la personne
