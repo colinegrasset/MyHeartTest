@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +22,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -33,15 +35,58 @@ import javax.xml.xpath.XPathFactory;
 public class TestResult extends AppCompatActivity {
 
     private String url;
+    private Personne person;
+
+    private TextView genre;
+    private TextView age;
+
+    private int P1Q1;
+    private Genre P1Q2;
+
+    private boolean P2Q1;
+    private boolean P2Q2;
+    private boolean P2Q3;
+    private boolean P2Q4;
+    private boolean P2Q5;
+    private String P2Q6;
+
+    private boolean P3Q1;
+    private boolean P3Q2;
+    private boolean P3Q3;
+
+    private boolean P4Q1;
+    private boolean P4Q2;
+    private boolean P4Q3;
+    private boolean P4Q4;
+    private boolean P4Q5;
+    private boolean P4Q6;
+    private boolean P4Q7;
+    private boolean P4Q8;
+    private boolean P4Q9;
+
+    private int BonusMalus;
+    private int ScoreActi1;
+    private int ScoreActi2;
+    private int ScoreActi3;
+
+    private String Color1;
+    private String Color2;
+    private String Color3;
+
     private static final String TestResult = "src/main/res/layout/activity_test_result.xml";
     private static final String TestResultLand = "src/main/res/layout-land/activity_test_result.xml";
-    private Personne person; // Objet personne dans lequel sont stockées les informations saisies par l'utilisateur
+   // private Personne person; // Objet personne dans lequel sont stockées les informations saisies par l'utilisateur
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_result);
         url ="https://fedecardio.org/je-me-teste/";
+        person = new Personne();
+        processIntentData();
+
+        genre = findViewById(R.id.textViewGenderInput);
+        age = findViewById(R.id.textViewAgeInput);
 
         // Création de l'objet personne et récupération des données de l'activité précédente
         person = new Personne();
@@ -286,19 +331,10 @@ public class TestResult extends AppCompatActivity {
             tf.transform(domSource1, sr);
             tf.transform(domSource2, sr);
             tf.transform(domSource3, sr);
-        } catch (ParserConfigurationException | IOException | SAXException | XPathExpressionException | TransformerException e) {
+        } catch (TransformerException e) {
             e.printStackTrace();
         }
-    }
 
-    public void goToSite(View view) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(url));
-        startActivity(intent);
-    }
-
-    public void quitTest(View view) {
-        finishAffinity();
     }
 
     // This method (whose name is abritrary) is called by onCreate().
@@ -313,12 +349,27 @@ public class TestResult extends AppCompatActivity {
                 this.person = transferredPerson;
                 this.person.print();
             } else {
-                Log.d(IAm.TAG, "No Person found after transfer from MainActivity");
+                Log.d(MyHabitDiet.TAG, "No Person found after transfer from MyH");
             }
         }
         else {
-            Log.d(IAm.TAG, "Error when transferring from MainActivity");
+            Log.d(MyHabitDiet.TAG, "Error when transferring from MyHeartMonito");
         }
+    }
+
+    public void afficheResultats(){
+        genre.setText(P1Q2.toString());
+        age.setText(Integer.toString(P1Q1));
+    }
+
+    public void goToSite(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
+    }
+
+    public void quitTest(View view) {
+        finishAffinity();
     }
 
     //ToDo Calculer les scores des 3 activités

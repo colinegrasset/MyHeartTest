@@ -73,7 +73,7 @@
     <string name="test_answers">Test Answers</string>
     <string name="gender">Gender :</string>
     <string name="defaulttext">defaultText</string>
-    <string name="age" translatable="false">Age :</string>
+    <string name="age">Age :</string>
     <string name="heart_problems">Heart problems :</string>
     <string name="daily_meals">Daily meals :</string>
     <string name="daily_food">Daily food :</string>
