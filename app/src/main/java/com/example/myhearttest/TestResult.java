@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class TestResult extends AppCompatActivity {
@@ -34,6 +35,11 @@ public class TestResult extends AppCompatActivity {
     private boolean P4Q7;
     private boolean P4Q8;
     private boolean P4Q9;
+
+    private int BonusMalus;
+    private int ScoreActi1;
+    private int ScoreActi2;
+    private int ScoreActi3;
 
 
 
@@ -69,13 +75,107 @@ public class TestResult extends AppCompatActivity {
         P4Q9 = person.getSnacking();
 
         //calcul score page Iam qui va influencer en bonus ou malus sur les autres scores
-        //if(P1Q1 == "male"){}
+        // Plus le score avoisine zéro meilleure est la santé de la personne
+        if(P1Q2.toString().equals("MAN")) {
+            if (P1Q1 > 50) {
+                BonusMalus = +1;
+            }else{
+                BonusMalus = -1;
+            }
+        }else if (P1Q2.toString().equals("WOMAN")) {
+            if (P1Q1 > 60) {
+                BonusMalus = +1;
+            }else{
+                BonusMalus = -1;
+            }
 
+        }else{
+            if (P1Q1 > 50) {
+                BonusMalus = +1;
+            }else{
+                BonusMalus = -1;
+            }
+        }
+        Log.d("Bonus ou malus de la personne:",String.valueOf(BonusMalus));
 
         //Calcul score page myHeart
-        //calcul score page mheartmonitoring
-        //calcul score page habitdiet
 
+        // si c'est vrai alors +1 sinon +0
+        if(P2Q1){
+            ScoreActi1 = 1;
+        }else{
+            ScoreActi1 = 0;
+        }
+
+        if(P2Q2){
+            ScoreActi1 = ScoreActi1 + 1;
+        }
+        if(P2Q3){
+            ScoreActi1 = ScoreActi1 + 1;
+        }
+        if(P2Q4){
+            ScoreActi1 = ScoreActi1 + 1;
+        }
+        if(P2Q5){
+            ScoreActi1 = ScoreActi1 + 1;
+        }
+        if(P2Q6.toString().equals("Poids_normal")){
+            ScoreActi1 = ScoreActi1 - 1;
+        }
+        ScoreActi1 = ScoreActi1 + BonusMalus;
+        Log.d("Score de l'acti myHeart:",String.valueOf(ScoreActi1));
+
+        //calcul score page mheartmonitoring
+        if(P3Q1){
+            ScoreActi2 = 1;
+        }else{
+            ScoreActi2 = 0;
+        }
+
+        if(P3Q2){
+            ScoreActi2 = ScoreActi2 + 1;
+        }
+        if(P3Q3) {
+            ScoreActi2 = ScoreActi2 + 1;
+        }
+        ScoreActi2 = ScoreActi2 + BonusMalus;
+        Log.d("Score de l'acti myHeartMonitoring:",String.valueOf(ScoreActi2));
+
+        //calcul score page habitdiet
+        if(P4Q1){
+            ScoreActi3 = 1;
+        }else{
+            ScoreActi3 = 0;
+        }
+
+        if(P4Q2){
+            ScoreActi3 = ScoreActi3 + 1;
+        }
+        if(P4Q3) {
+            ScoreActi3 = ScoreActi3 + 1;
+        }
+        if(P4Q4) {
+            ScoreActi3 = ScoreActi3 + 1;
+        }
+        if(P4Q5) {
+            ScoreActi3 = ScoreActi3 + 1;
+        }
+        if(P4Q6) {
+            ScoreActi3 = ScoreActi3 + 1;
+        }
+        if(P4Q7) {
+            ScoreActi3 = ScoreActi3 + 1;
+        }
+        if(P4Q8) {
+            ScoreActi3 = ScoreActi3 + 1;
+        }
+        if(P4Q9) {
+            ScoreActi3 = ScoreActi3 + 1;
+        }
+        ScoreActi3 = ScoreActi3 + BonusMalus;
+        Log.d("Score de l'acti myHabitDiet:",String.valueOf(ScoreActi3));
+
+        // Détermination de la couleur des 3 fonds des EditText affichage conseil
 
     }
 
