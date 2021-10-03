@@ -109,32 +109,32 @@ public class MyHeart extends AppCompatActivity {
         } else {
             if (radioYesQ1.isChecked()) {
                 person.setCoeur(true);
-            } else if (radioYesQ2.isChecked()) {
+            } else if (radioNoQ2.isChecked()) {
                 person.setCoeur(false);
             }
 
             if (radioYesQ2.isChecked()) {
                 person.setCholesterol(true);
-            } else if (radioYesQ2.isChecked()) {
+            } else if (radioNoQ2.isChecked()) {
                 person.setCholesterol(false);
             }
 
             if (radioYesQ3.isChecked()) {
                 person.setDiabetique(true);
-            } else if (radioYesQ3.isChecked()) {
+            } else if (radioNoQ3.isChecked()) {
                 person.setDiabetique(false);
             }
 
             if (radioYesQ4.isChecked()) {
                 person.setTension(true);
-            } else if (radioYesQ4.isChecked()) {
+            } else if (radioNoQ4.isChecked()) {
                 person.setTension(false);
             }
 
             if (switchQ5.isChecked()) {
                 person.setFamillePbCoeur(true);
             } else {
-                person.setFamillePbCoeur(true);
+                person.setFamillePbCoeur(false);
             }
             person.setIMC(spinnerQ6.getSelectedItem().toString());
         }
