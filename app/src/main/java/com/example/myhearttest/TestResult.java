@@ -331,7 +331,7 @@ public class TestResult extends AppCompatActivity {
             tf.transform(domSource1, sr);
             tf.transform(domSource2, sr);
             tf.transform(domSource3, sr);
-        } catch (TransformerException e) {
+        } catch (TransformerException | ParserConfigurationException | IOException | XPathExpressionException | SAXException e) {
             e.printStackTrace();
         }
 
