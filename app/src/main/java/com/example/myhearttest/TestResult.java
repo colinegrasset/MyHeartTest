@@ -325,7 +325,7 @@ public class TestResult extends AppCompatActivity {
             Color3 = "#7CD181";
         }
 
-        /**
+
         // les id des textview que je dois modifier:
         // myHeartAdvice
         //myHeartMonitoringAdvice
